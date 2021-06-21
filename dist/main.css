@@ -577,7 +577,7 @@ WHITE SPACE CLASSES
   .input-subscribe {
     margin-bottom: 0; } }
 
-@media (min-width: 1025px) {
+@media (min-width: 1440px) {
   .site-footer {
     padding: 70px 0; }
   .footer-content {
@@ -611,7 +611,7 @@ WHITE SPACE CLASSES
         margin-bottom: 0; }
       .social-media-footer .nav-container {
         flex-grow: 1; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 1440px) {
     .social-media-footer {
       display: block;
       width: auto;
@@ -651,7 +651,7 @@ WHITE SPACE CLASSES
           width: 2px;
           height: 100%;
           background: #ffffff; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 1440px) {
     .copyright-section {
       justify-content: unset; } }
 
@@ -1319,8 +1319,7 @@ TESTIMONIALS SECTION STYLES
     margin-bottom: 50px; }
   .testimonial-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: space-between; }
     .testimonial-card:first-child {
       padding-bottom: 40px;
       border-bottom: 1px solid rgba(69, 125, 150, 0.3); }
@@ -1348,7 +1347,8 @@ TESTIMONIALS SECTION STYLES
   .testimonials {
     margin-bottom: 15vh; }
   .testimonial-card {
-    flex-basis: 45%; }
+    flex-basis: 45%;
+    align-items: flex-start; }
     .testimonial-card:first-child {
       padding-bottom: 0;
       border-bottom: 0; }
