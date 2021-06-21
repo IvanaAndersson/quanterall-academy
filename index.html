@@ -146,7 +146,7 @@
     </header>
     <main>
       <section class="hero-section">
-        <div class="container row">
+        <div class="container row no-paddings">
           <h1 class="hero-title col-md-6 offset-md-1 col-lg-4 offset-lg-1">
             Software Development <br />
             <strong>Specialization Courses</strong> <br />
@@ -169,7 +169,7 @@
             <img src="./assets/icon-blockchain.png" alt="" />
             <h4>Blockchain</h4>
           </section>
-          <section class="card__side card__side--back">
+          <section class="card__side card__side--back visually-hidden">
             <p>
               Modern problems require modern solutions – that’s why blockchain
               is a must-have. We bring you the most important practices and
@@ -183,7 +183,7 @@
             <img src="./assets/icon-fp.png" alt="" />
             <h4>Functional Programming</h4>
           </section>
-          <section class="card__side card__side--back">
+          <section class="card__side card__side--back visually-hidden">
             <p>
               Functional programming languages are a high-demand skill set for
               developers as most of them are scalable and easily maintained. We
@@ -197,7 +197,7 @@
             <img src="./assets/icon-ar.png" alt="" />
             <h4>Augmented Reality</h4>
           </section>
-          <section class="card__side card__side--back">
+          <section class="card__side card__side--back visually-hidden">
             <p>
               Design your dream virtual environment through our AR training
               programs. Step up to the technological trend and become one of the
@@ -210,7 +210,7 @@
             <img src="./assets/icon-bioinformatics.png" alt="" />
             <h4>Bioinformatics</h4>
           </section>
-          <section class="card__side card__side--back">
+          <section class="card__side card__side--back visually-hidden">
             <p>
               Follow the logic of genetics and be ahead of life processes with
               computational biology. Learn the bioinformatics concepts by
@@ -293,15 +293,7 @@
         <header class="section-header offset-md-1 offset-lg-1">
           <h2>Worldwide recognized teachers</h2>
         </header>
-        <div
-          class="
-            cards-wrapper
-            row
-            offset-md-1 offset-lg-1
-            col-lg-4
-            justify-between
-          "
-        >
+        <div class="cards-wrapper row offset-lg-1 col-lg-4">
           <article
             class="teachers-card teachers-detail-inside col-md-2 col-lg-2"
           >
@@ -336,15 +328,7 @@
             </section>
           </article>
         </div>
-        <div
-          class="
-            cards-wrapper
-            row
-            offset-md-1 offset-lg-1
-            col-lg-4
-            justify-between
-          "
-        >
+        <div class="cards-wrapper row offset-lg-1 col-lg-4">
           <article
             class="teachers-card teachers-detail-inside col-md-2 col-lg-2"
           >
@@ -372,8 +356,10 @@
         </div>
       </section>
 
-      <div class="shape display-none-mobile">
+      <div class="display-none-mobile shape">
         <svg
+          width="500"
+          height="500"
           viewBox="0 0 989 1217"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -1312,7 +1298,10 @@
         <header
           class="section-header offset-md-1 col-md-4 col-xl-3 offset-xl-1"
         >
-          <h2>What our students say about us</h2>
+          <h2>
+            What our students <br aria-hidden="true" />
+            say about us
+          </h2>
         </header>
         <div
           class="
