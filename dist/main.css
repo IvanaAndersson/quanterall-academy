@@ -603,6 +603,7 @@ WHITE SPACE CLASSES
   vertical-align: middle; }
 
 .site-footer {
+  width: 100vw;
   background: #001b2a;
   height: 555px;
   min-height: 400px; }
@@ -1232,7 +1233,7 @@ TEACHERS SECTION STYLES
     position: absolute;
     top: 60%;
     right: 0;
-    background: url("../../assets/shapes/teachers-shape.png") left 50% no-repeat;
+    background: url("../assets/shapes/teachers-shape.png") left 50% no-repeat;
     background-size: cover;
     z-index: -1; }
     @media (min-width: 1440px) {
@@ -1433,7 +1434,7 @@ HOW TO ENROLL SECTION STYLES
     position: absolute;
     top: -13%;
     left: -60%;
-    background: url("../../assets/shapes/enroll-shape.png") no-repeat;
+    background: url("../assets/shapes/enroll-shape.png") no-repeat;
     background-size: cover;
     z-index: -1; }
     @media (min-width: 1024px) {
