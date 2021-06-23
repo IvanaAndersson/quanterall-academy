@@ -9,7 +9,7 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 //set the height of the carousel to fit the children of the carousel track
 const slideHeight = slides[0].getBoundingClientRect().height;
-carousel.style.height = `${slideHeight}px`;
+carousel.style.height = `${slideHeight + 20}px`;
 
 const setSlidePosition = (slide, index) => {
   slide.style.left = slideWidth * index + "px";
