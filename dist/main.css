@@ -104,7 +104,7 @@ GRID VARIABLES
 
 body {
   font-size: 1rem;
-  font-family: "Mont", sans-serif;
+  font-family: "Mont-Regular", sans-serif;
   line-height: 1.3;
   color: #001b2a;
   background: #ffffff; }
@@ -141,7 +141,7 @@ h4 {
   font-size: 1em; }
 
 .button {
-  font-weight: 800; }
+  font-family: "Mont-Bold"; }
   @media (min-width: 768px) {
     .button {
       font-size: 1rem; } }
@@ -150,7 +150,6 @@ h4 {
       font-size: 1em; } }
 
 .nav-link {
-  font-weight: 600;
   font-size: 1.0625rem; }
 
 .breadcrumb {
@@ -1325,14 +1324,14 @@ HOW TO ENROLL SECTION STYLES
     position: relative;
     padding: 0.9rem 0 0.9rem 1.5rem;
     color: #457d96;
-    font: 600 25px/1.3 "Mont";
+    font-size: 25px;
     border-bottom: 1px solid rgba(69, 125, 150, 0.5); }
     .enroll-step p::before {
       display: inline-block;
       content: "1";
       margin-right: 0.5rem;
       font: inherit;
-      font-weight: bold;
+      font-family: "Mont-Bold";
       position: absolute;
       top: 0.9rem;
       left: 0; }
@@ -1375,8 +1374,8 @@ HOW TO ENROLL SECTION STYLES
       align-self: flex-start; }
       .enroll-step p {
         color: #000000;
-        font-family: "Mont";
-        font-weight: 800;
+        font-family: "Mont-Regular";
+        font-family: "Mont-Bold";
         font-size: 0.9375rem;
         border: 0;
         padding: 0.9rem 0 0.9rem 2rem; }
