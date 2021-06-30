@@ -1394,7 +1394,7 @@ ACADEMY PARTNERS SECTION STYLES
   color: #ffffff;
   background: #001b2a;
   padding: 40px;
-  background: url("../../assets/PartnersSection.png") center no-repeat;
+  background: url("../assets/PartnersSection.png") center no-repeat;
   background-size: cover; }
   .partners .section-header {
     text-align: center;
