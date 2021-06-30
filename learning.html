@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning</title>
+    <link rel="stylesheet" href="./dist/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container no-paddings">
+        <a href="/" class="header-logo col-3 col-lg-2">
+          <svg
+            width="186"
+            height="47"
+            viewBox="0 0 186 47"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M74.4425 29.4742H68.4174L67.476 32.3365H62.4395L69.1235 14.6698H73.7129L80.5382 32.3365H75.3839L74.4425 29.4742ZM71.43 20.2068L69.5707 25.6734H73.3128L71.43 20.2068Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M89.5521 32.8059C84.3743 32.8059 80.491 28.8174 80.491 23.5384C80.491 18.2126 84.3508 14.2476 89.5521 14.2476C94.0238 14.2476 97.46 17.2976 98.166 21.7788H93.4119C92.8235 19.9722 91.3643 18.7992 89.5756 18.7992C87.175 18.7992 85.3863 20.8169 85.3863 23.5384C85.3863 26.26 87.1515 28.2543 89.5756 28.2543C91.4584 28.2543 92.9412 26.9873 93.4354 25.0165H98.2366C97.5541 29.6385 94.0944 32.8059 89.5521 32.8059Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M132.033 23.515C132.033 28.6766 128.385 32.3601 123.255 32.3601H116.359V14.6934H123.255C128.409 14.6934 132.033 18.3299 132.033 23.515ZM127.232 23.515C127.232 20.8873 125.561 19.1511 123.043 19.1511H121.09V27.9024H123.043C125.538 27.9024 127.232 26.1193 127.232 23.515Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M145.566 28.137V32.3601H134.458V14.6934H145.355V18.893H139.141V21.4973H144.743V25.4858H139.141V28.137H145.566Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M165.101 32.3601L163.783 22.1777L159.264 32.3836H157.875L153.357 22.1777L152.039 32.3601H147.284L149.85 14.6934H154.533L158.534 24.3127L162.559 14.6934H167.242L169.784 32.3601H165.101Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M180.069 25.4389V32.3601H175.292V25.4389L169.384 14.6934H174.586L177.692 21.075L180.799 14.6934H186L180.069 25.4389Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M110.334 22.9985L107.721 28.6059L109.486 32.3598H114.711L110.334 22.9985Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M106.45 14.6698H106.38H101.226L103.791 20.2068L98.1189 32.36H103.344L109.039 20.2068L106.45 14.6698Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M74.2542 12.4641L73.2657 11.3145C72.7479 11.5726 72.136 11.7133 71.477 11.7133C69.3117 11.7133 67.7349 10.1414 67.7349 8.02982C67.7349 5.91826 69.3117 4.34631 71.477 4.34631C73.6422 4.34631 75.2191 5.91826 75.2191 8.02982C75.2191 9.17945 74.7484 10.1648 73.9717 10.8452L75.3603 12.4406L74.2542 12.4641ZM72.6538 10.6106L70.9827 8.66329H72.0654L73.3598 10.1648C73.9482 9.64868 74.2777 8.92137 74.2777 8.05328C74.2777 6.45788 73.0774 5.23786 71.4535 5.23786C69.8295 5.23786 68.6292 6.45788 68.6292 8.05328C68.6292 9.64868 69.8295 10.8452 71.4535 10.8452C71.9006 10.8687 72.3007 10.7749 72.6538 10.6106Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M77.2432 8.96837V4.51062H78.1375V8.92144C78.1375 10.0945 78.9377 10.8688 80.0439 10.8688C81.15 10.8688 81.9267 10.0711 81.9267 8.92144V4.51062H82.821V8.96837C82.821 10.5872 81.6207 11.7369 80.0203 11.7369C78.4435 11.7369 77.2432 10.5872 77.2432 8.96837Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M89.3638 9.90684H85.9512L85.2451 11.6196H84.3037L87.2221 4.51062H88.0458L91.0583 11.6196H90.0934L89.3638 9.90684ZM86.2807 9.08567H89.0343L87.6457 5.73063L86.2807 9.08567Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M98.5427 4.48694V11.5959H97.7896L93.718 6.05888V11.6193H92.8472V4.5104H93.6474L97.6484 10.0005V4.5104L98.5427 4.48694Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M105.603 5.33156H103.438V11.6193H102.544V5.33156H100.378V4.48694H105.627L105.603 5.33156Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M111.605 10.7512V11.5959H107.463V4.48694H111.511V5.33156H108.357V7.53697H111.228V8.35814H108.357V10.7512H111.605Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M116.265 8.82759H114.641V11.6196H113.746V4.51062H116.453C117.794 4.51062 118.783 5.42563 118.783 6.69257C118.783 7.70143 118.147 8.47567 117.206 8.73375L118.924 11.6196H117.912L116.265 8.82759ZM114.641 7.98297H116.406C117.277 7.98297 117.865 7.44335 117.865 6.66911C117.865 5.91833 117.277 5.35525 116.406 5.35525H114.641V7.98297Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M125.161 9.90684H121.725L121.019 11.6196H120.078L122.996 4.51062H123.82L126.832 11.6196H125.867L125.161 9.90684ZM122.055 9.08567H124.808L123.42 5.73063L122.055 9.08567Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M132.669 10.7749V11.6196H128.644V4.51062H129.539V10.7984H132.669V10.7749Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M138.529 10.7749V11.6196H134.505V4.51062H135.399V10.7984H138.529V10.7749Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M32.8555 17.9308L29.2075 25.7201L31.6552 30.9521H38.9276L32.8555 17.9308Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M27.4185 6.34094H27.3479H20.1461L23.747 14.0364L15.8391 30.9524H23.1115L31.0194 14.0364L27.4185 6.34094Z"
+              fill="#00C1C9"
+            />
+            <path
+              d="M35.1379 36.1843H19.5811V39.469H35.1379V36.1843Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M39.4453 42.0737H15.3215V45.3584H39.4453V42.0737Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M15.2509 36.9115H9.67303C6.42515 36.9115 3.78919 34.2838 3.78919 31.0461V22.9987C3.78919 22.9987 3.78919 21.9664 3.03606 21.2156C2.42414 20.5821 1.38859 20.2771 0 20.2771V16.9925C1.38859 16.9925 2.42414 16.664 3.03606 16.054C3.78919 15.3032 3.78919 14.2474 3.78919 14.2474V6.22349C3.78919 2.98576 6.42515 0.358032 9.67303 0.358032H15.2509V3.64269H9.67303C8.23738 3.64269 7.08414 4.79232 7.08414 6.22349V14.177C7.08414 14.5759 7.06061 16.6405 5.4602 18.3063C5.34253 18.4236 5.22485 18.5409 5.10717 18.6348C5.22485 18.7521 5.34253 18.8459 5.4602 18.9633C7.06061 20.629 7.10768 22.6937 7.08414 23.0925V31.0461C7.08414 32.4773 8.23738 33.6269 9.67303 33.6269H15.2509V36.9115Z"
+              fill="#001B2A"
+            />
+            <path
+              d="M45.094 36.9115H39.5161V33.6269H45.094C46.5297 33.6269 47.6829 32.4773 47.6829 31.0461V23.0925C47.6829 22.6937 47.7064 20.629 49.3068 18.9633C49.4245 18.8459 49.5422 18.7286 49.6599 18.6348C49.5422 18.5175 49.4245 18.4236 49.3068 18.3063C47.7064 16.6405 47.6593 14.5759 47.6829 14.177V6.22349C47.6829 4.79232 46.5297 3.64269 45.094 3.64269H39.5161V0.358032H45.094C48.3419 0.358032 50.9778 2.98576 50.9778 6.22349V14.2709C50.9778 14.2709 50.9778 15.3032 51.731 16.054C52.3429 16.6875 53.3784 16.9925 54.767 16.9925V20.2771C53.3784 20.2771 52.3429 20.6056 51.731 21.2156C50.9778 21.9664 50.9778 23.0222 50.9778 23.0222V31.0461C50.9543 34.2838 48.3183 36.9115 45.094 36.9115Z"
+              fill="#001B2A"
+            />
+          </svg>
+          <span class="visually-hidden">Quanterall Academy</span>
+        </a>
+
+        <nav class="nav-header col-1 col-lg-6">
+          <input
+            type="checkbox"
+            name="nav-main-toggle"
+            id="nav-main-toggle"
+            class="nav-toggle visually-hidden"
+          />
+          <label for="nav-main-toggle" id="nav-toggle">
+            <span class="visually-hidden">Menu icon</span>
+            <span class="navbar-icon"></span>
+          </label>
+          <ul class="nav-container">
+            <li class="nav-item">
+              <a class="nav-link active" href="/learning.html">Learning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/lectors.html">Lectors</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="">Partners</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
+            <li class="nav-item cta-button">
+              <a class="nav-link" href="">Sign In</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="learning-page">
+      <section class="header__section">
+        <header class="header__banner container">
+          <h1 class="header__title offset-lg-1 offset-xl-1">
+            <strong>Learn New Technologies</strong> <br />
+            with Quanterall Academy
+          </h1>
+        </header>
+
+        <nav class="breadcrumbs__nav container">
+          <ul class="breadcrumb__list offset-lg-1 offset-xl-1">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="/">Home</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link active" href="/learning.html"
+                >Learning</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="page-introduction row no-paddings">
+        <div
+          class="introduction__text col-md-4 offset-lg-1 offset-xl-1 col-xl-3"
+        >
+          <p>
+            Hands-on Training and Mentorship provided by the only Academy for
+            Functional Programming in South Europe
+          </p>
+        </div>
+        <div class="introduction__image display-none-mobile">
+          <img src="./assets/learning-page/Rectangle 56.png" alt="" />
+        </div>
+      </section>
+
+      <section class="reasons-sign-up container padding-no-bottom no-paddings">
+        <article class="reasons__wrapper offset-lg-1 offset-xl-1">
+          <div class="section-header">
+            <h2>Why sign up for the courses?</h2>
+          </div>
+          <div class="reasons__image">
+            <img src="./assets/learning-page/compass.png" alt="" />
+          </div>
+          <div class="reasons__text-wrapper">
+            <p>
+              Quanterall Academy provides advanced training for software
+              developers. We are sharing valuable knowledge about the
+              fastest-growing technologies in the industry. At the Academy you
+              will:
+            </p>
+            <ul>
+              <li>Learn New Emerging Technologies and In-Demand Skills</li>
+              <li>Improve your Development Methodology</li>
+              <li>Quality Specialization in the IT industry</li>
+              <li>Receive Pro Training and Mentorship from Experts</li>
+              <li>Practice by Developing Real Projects</li>
+              <li>Write Sustainable and Scalable Code in Less Time</li>
+              <li>Explore New Job Opportunities</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="know-how-accordion container padding-no-bottom no-paddings"
+      >
+        <div class="section-header col-lg-6 col-xl-4 margin-auto">
+          <h2>
+            Building a career in tech is not as easy as it seems.
+            <br aria-hidden="true" />
+            That is why we have decided to share our know-how with all aspiring
+            professionals.
+          </h2>
+        </div>
+        <div class="accordion col-lg-6 col-xl-4 margin-auto">
+          <article class="accordion__item">
+            <button class="button accordion__button" type="button">
+              Skip the Trial & Error.
+            </button>
+
+            <section class="accordion__body">
+              <p>
+                We take the hassle out of finding what you need and putting it
+                in one convenient place. It’s the fast track to doing more of
+                what you love. All lessons are based on a strictly structured
+                program that takes you straight to the point.
+              </p>
+            </section>
+          </article>
+          <article class="accordion__item">
+            <button class="button accordion__button" type="button">
+              Taught by Developers. For Developers.
+            </button>
+
+            <section class="accordion__body">
+              <p>
+                No deviation or non-useful theory. As software developers, we
+                understand what you are looking for and where questions can
+                occur. That's why out training includes a real project
+                environment and goal-oriented methodology.
+              </p>
+            </section>
+          </article>
+          <article class="accordion__item">
+            <button class="button accordion__button" type="button">
+              More than just another software development course.
+            </button>
+
+            <section class="accordion__body">
+              <p>
+                Our courses are aimed towards mastering a certain job-based tech
+                stach that actually matters for your career development. Each
+                lesson covers a useful development approach in one of the
+                following areas - functional programming, blockchain, augmented
+                reality, bioinformatics, and many more.
+              </p>
+              <p>
+                Targeted towards professionals who want to become experts in yet
+                another cutting-edge technology. Valuabl networking, more
+                professional freedom, and new project possibilities.
+              </p>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <section class="who-can-join container padding-no-bottom">
+        <article class="row">
+          <section class="developers__list col-md-5 col-lg-4 col-xl-3">
+            <div class="section-header">
+              <h2>Who can join Quanterall Academy?</h2>
+            </div>
+            <ul>
+              <li>
+                <strong>Junior Developers</strong> - if you have been working in
+                the IT field for more than a year and are familiar with the
+                basics of programming - you are on the right spot.
+              </li>
+              <li>
+                <strong>Mid-Level Developers</strong> - you already have
+                developed a couple of projects and now you are aiming higher -
+                we got you covered.
+              </li>
+              <li>
+                <strong>Senior Developers</strong> - another programming
+                language or a new skill is always good for your CV or maybe for
+                your new personal project?
+              </li>
+              <li>
+                <strong>Freshly Graduated Software Developers</strong> - you
+                just got out of the university and you are not sure if what you
+                have learned is enough? Quanterall Academy will give you
+                knowledge directly from the source and will give you a head
+                start on the way to your new job!
+              </li>
+            </ul>
+          </section>
+          <section class="joining__info col-md-3 col-lg-3 col-xl-2">
+            <p>
+              The IT courses are professional training for software developers
+              with a certain level of professional background and business
+              experience. Junior, Mid-Level, and Senior IT Specialists are all
+              considered welcome to join Quanterall Academy. We are here to make
+              engineers better by keeping their expertise up-to-date and
+              providing them high-quality in-demand knowledge.
+            </p>
+            <p class="joining__info--bolded">
+              Dive deep into advanced technology with purpose and build your
+              future.
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <section class="enroll-section">
+        <div class="section-header offset-lg-1 col-lg-5 offset-xl-1 col-xl-3">
+          <h2>How to enroll?</h2>
+          <ol>
+            <li>Send your application</li>
+            <li>Pass the entry exam</li>
+            <li>Join Quanterall Academy’s Learning Programmes</li>
+            <li>Learn & Practice through Guided Projects with Pro Mentors</li>
+            <li>Level up your Career!</li>
+          </ol>
+        </div>
+        <article class="enroll-cta row">
+          <div class="col-md-4 offset-lg-1 offset-xl-1 col-xl-3">
+            <div class="buttons-container">
+              <a href="/" class="button button-primary">Join the Academy</a>
+              <a href="/" class="button button-primary">Learning schedule</a>
+            </div>
+            <div class="enroll-text">
+              <p>
+                Quanterall Academy is awaiting new participants in the program.
+                All applications will be taken under consideration and you will
+                receive feedback in a timely manner.
+              </p>
+              <p>
+                Our high-quality educational resources cover the trending tech
+                topics, so you can learn how to code better in less time. And if
+                you like what we’re doing here, we hope you’ll join us and make
+                an impact that lasts.
+              </p>
+            </div>
+          </div>
+          <div class="image-wrapper col-md-4 col-lg-3 col-xl-2">
+            <img src="./assets/learning-page/Rectangle 60.png" alt="" />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer padding-top-bottom">
+      <div class="container col-md-6 col-xl-4">
+        <section class="footer-content no-paddings">
+          <a href="/" class="footer-logo">
+            <svg
+              width="186"
+              height="50"
+              viewBox="0 0 186 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M74.4425 29.4744H68.4174L67.476 32.3368H62.4395L69.1235 14.67H73.7129L80.5382 32.3368H75.3839L74.4425 29.4744ZM71.43 20.207L69.5707 25.6736H73.3128L71.43 20.207Z"
+                fill="white"
+              />
+              <path
+                d="M89.5521 32.8065C84.3743 32.8065 80.491 28.818 80.491 23.5391C80.491 18.2132 84.3508 14.2482 89.5521 14.2482C94.0238 14.2482 97.46 17.2982 98.166 21.7794H93.4119C92.8235 19.9729 91.3643 18.7998 89.5756 18.7998C87.175 18.7998 85.3863 20.8175 85.3863 23.5391C85.3863 26.2606 87.1515 28.2549 89.5756 28.2549C91.4585 28.2549 92.9412 26.9879 93.4354 25.0171H98.2366C97.5541 29.6391 94.0944 32.8065 89.5521 32.8065Z"
+                fill="white"
+              />
+              <path
+                d="M132.033 23.5152C132.033 28.6768 128.385 32.3603 123.255 32.3603H116.359V14.6936H123.255C128.409 14.6936 132.033 18.3302 132.033 23.5152ZM127.232 23.5152C127.232 20.8875 125.561 19.1513 123.043 19.1513H121.09V27.9026H123.043C125.538 27.9026 127.232 26.1195 127.232 23.5152Z"
+                fill="white"
+              />
+              <path
+                d="M145.566 28.1372V32.3603H134.458V14.6936H145.355V18.8933H139.141V21.4975H144.743V25.486H139.141V28.1372H145.566Z"
+                fill="white"
+              />
+              <path
+                d="M165.101 32.3603L163.783 22.1779L159.264 32.3838H157.875L153.357 22.1779L152.039 32.3603H147.284L149.85 14.6936H154.533L158.534 24.3129L162.559 14.6936H167.242L169.784 32.3603H165.101Z"
+                fill="white"
+              />
+              <path
+                d="M180.069 25.4391V32.3603H175.291V25.4391L169.384 14.6936H174.585L177.692 21.0752L180.799 14.6936H186L180.069 25.4391Z"
+                fill="white"
+              />
+              <path
+                d="M110.334 22.9988L107.721 28.6062L109.487 32.36H114.711L110.334 22.9988Z"
+                fill="white"
+              />
+              <path
+                d="M106.45 14.67H106.38H101.226L103.791 20.207L98.1189 32.3603H103.344L109.039 20.207L106.45 14.67Z"
+                fill="white"
+              />
+              <path
+                d="M74.2542 12.4647L73.2657 11.3151C72.7479 11.5732 72.136 11.7139 71.477 11.7139C69.3117 11.7139 67.7349 10.142 67.7349 8.03043C67.7349 5.91887 69.3117 4.34692 71.477 4.34692C73.6422 4.34692 75.2191 5.91887 75.2191 8.03043C75.2191 9.18006 74.7484 10.1655 73.9717 10.8458L75.3603 12.4412L74.2542 12.4647ZM72.6538 10.6112L70.9827 8.6639H72.0654L73.3598 10.1655C73.9482 9.64929 74.2777 8.92198 74.2777 8.05389C74.2777 6.45849 73.0774 5.23847 71.4535 5.23847C69.8295 5.23847 68.6292 6.45849 68.6292 8.05389C68.6292 9.64929 69.8295 10.8458 71.4535 10.8458C71.9006 10.8693 72.3007 10.7755 72.6538 10.6112Z"
+                fill="white"
+              />
+              <path
+                d="M77.2432 8.96885V4.51111H78.1375V8.92193C78.1375 10.095 78.9377 10.8693 80.0439 10.8693C81.15 10.8693 81.9267 10.0716 81.9267 8.92193V4.51111H82.821V8.96885C82.821 10.5877 81.6207 11.7373 80.0203 11.7373C78.4435 11.7373 77.2432 10.5877 77.2432 8.96885Z"
+                fill="white"
+              />
+              <path
+                d="M89.3638 9.90733H85.9512L85.2451 11.62H84.3037L87.2221 4.51111H88.0458L91.0584 11.62H90.0934L89.3638 9.90733ZM86.2807 9.08616H89.0343L87.6457 5.73112L86.2807 9.08616Z"
+                fill="white"
+              />
+              <path
+                d="M98.5427 4.48755V11.5965H97.7896L93.718 6.05949V11.6199H92.8472V4.51101H93.6474L97.6484 10.0011V4.51101L98.5427 4.48755Z"
+                fill="white"
+              />
+              <path
+                d="M105.603 5.33217H103.438V11.6199H102.544V5.33217H100.378V4.48755H105.627L105.603 5.33217Z"
+                fill="white"
+              />
+              <path
+                d="M111.605 10.7519V11.5965H107.462V4.48755H111.51V5.33217H108.357V7.53758H111.228V8.35875H108.357V10.7519H111.605Z"
+                fill="white"
+              />
+              <path
+                d="M116.265 8.82808H114.641V11.62H113.746V4.51111H116.453C117.794 4.51111 118.783 5.42612 118.783 6.69306C118.783 7.70191 118.147 8.47615 117.206 8.73423L118.924 11.62H117.912L116.265 8.82808ZM114.641 7.98346H116.406C117.277 7.98346 117.865 7.44383 117.865 6.6696C117.865 5.91882 117.277 5.35573 116.406 5.35573H114.641V7.98346Z"
+                fill="white"
+              />
+              <path
+                d="M125.161 9.90733H121.725L121.019 11.62H120.077L122.996 4.51111H123.819L126.832 11.62H125.867L125.161 9.90733ZM122.054 9.08616H124.808L123.419 5.73112L122.054 9.08616Z"
+                fill="white"
+              />
+              <path
+                d="M132.669 10.7754V11.62H128.644V4.51111H129.539V10.7989H132.669V10.7754Z"
+                fill="white"
+              />
+              <path
+                d="M138.529 10.7754V11.62H134.505V4.51111H135.399V10.7989H138.529V10.7754Z"
+                fill="white"
+              />
+              <path
+                d="M32.8555 17.9301L29.2075 25.7194L31.6552 30.9514H38.9276L32.8555 17.9301Z"
+                fill="white"
+              />
+              <path
+                d="M27.4185 6.34021H27.3479H20.1461L23.747 14.0357L15.8391 30.9517H23.1115L31.0194 14.0357L27.4185 6.34021Z"
+                fill="#00C1C9"
+              />
+              <path
+                d="M35.1382 36.1848H19.5813V39.4695H35.1382V36.1848Z"
+                fill="white"
+              />
+              <path
+                d="M39.4453 42.0736H15.3215V45.3583H39.4453V42.0736Z"
+                fill="white"
+              />
+              <path
+                d="M15.2509 36.9115H9.67304C6.42516 36.9115 3.78919 34.2838 3.78919 31.0461V22.9987C3.78919 22.9987 3.78919 21.9664 3.03606 21.2156C2.42414 20.5821 1.38859 20.2771 0 20.2771V16.9925C1.38859 16.9925 2.42414 16.664 3.03606 16.054C3.78919 15.3032 3.78919 14.2474 3.78919 14.2474V6.22349C3.78919 2.98576 6.42516 0.358032 9.67304 0.358032H15.2509V3.64269H9.67304C8.23738 3.64269 7.08415 4.79232 7.08415 6.22349V14.177C7.08415 14.5759 7.06061 16.6405 5.46021 18.3063C5.34253 18.4236 5.22485 18.5409 5.10718 18.6348C5.22485 18.7521 5.34253 18.8459 5.46021 18.9633C7.06061 20.629 7.10768 22.6937 7.08415 23.0925V31.0461C7.08415 32.4773 8.23738 33.6269 9.67304 33.6269H15.2509V36.9115Z"
+                fill="white"
+              />
+              <path
+                d="M45.094 36.9115H39.5161V33.6269H45.094C46.5297 33.6269 47.6829 32.4773 47.6829 31.0461V23.0925C47.6829 22.6937 47.7064 20.629 49.3068 18.9633C49.4245 18.8459 49.5422 18.7286 49.6599 18.6348C49.5422 18.5175 49.4245 18.4236 49.3068 18.3063C47.7064 16.6405 47.6594 14.5759 47.6829 14.177V6.22349C47.6829 4.79232 46.5297 3.64269 45.094 3.64269H39.5161V0.358032H45.094C48.3419 0.358032 50.9778 2.98576 50.9778 6.22349V14.2709C50.9778 14.2709 50.9778 15.3032 51.731 16.054C52.3429 16.6875 53.3784 16.9925 54.767 16.9925V20.2771C53.3784 20.2771 52.3429 20.6056 51.731 21.2156C50.9778 21.9664 50.9778 23.0221 50.9778 23.0221V31.0461C50.9543 34.2838 48.3183 36.9115 45.094 36.9115Z"
+                fill="white"
+              />
+            </svg>
+
+            <h1 class="display-none">Quanterall Academy Website</h1>
+          </a>
+          <section class="subscription-footer">
+            <form action="">
+              <label for="email-subscription"
+                >Subscribe to our newsletter:
+              </label>
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email-subscription"
+                  class="input-subscribe"
+                />
+                <button class="button button-subscribe">Subscribe</button>
+              </div>
+            </form>
+          </section>
+          <section class="social-media-footer">
+            <p>Follow us on:</p>
+            <ul class="nav-container">
+              <li>
+                <a href="" class="social-media-link"
+                  ><span class="visually-hidden">Twitter icon</span>
+                  <svg
+                    width="21"
+                    height="17"
+                    viewBox="0 0 21 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.699951 14.7843C2.49995 15.9843 4.69995 16.6843 7.09995 16.6843C14.8 16.6843 19.2 10.1843 18.9 4.28433C19.7 3.68433 20.4 2.98433 21 2.18433C20.2999 2.48433 19.5 2.78433 18.6 2.88433C19.5 2.38433 20.1 1.58433 20.4 0.584326C19.6 1.08433 18.7 1.38433 17.8 1.58433C17 0.684326 15.9 0.184326 14.7 0.184326C12.1 0.184326 10.1 2.68433 10.7 5.28433C7.19995 5.08433 4.19995 3.48433 2.09995 0.984326C0.999951 2.78433 1.49995 5.28433 3.39995 6.48433C2.69995 6.48433 2.09995 6.28433 1.49995 5.98433C1.49995 7.88433 2.79995 9.68433 4.79995 10.0843C4.19995 10.2843 3.59995 10.2843 2.89995 10.1843C3.39995 11.8843 4.99995 13.0843 6.79995 13.0843C5.09995 14.4843 2.89995 15.0843 0.699951 14.7843Z"
+                      fill="#00C1C9"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="social-media-link"
+                  ><span class="visually-hidden">Linked In icon</span>
+                  <svg
+                    width="19"
+                    height="20"
+                    viewBox="0 0 19 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.2999 7.28418H0.399902V19.9842H4.2999V7.28418Z"
+                      fill="#00C1C9"
+                    />
+                    <path
+                      d="M2.3 5.58428C3.6 5.58428 4.6 4.48428 4.6 3.28428C4.6 2.08428 3.6 0.884277 2.3 0.884277C1 0.884277 0 1.98428 0 3.18428C0 4.38428 1 5.58428 2.3 5.58428Z"
+                      fill="#00C1C9"
+                    />
+                    <path
+                      d="M10.6 13.2842C10.6 11.4842 11.4 10.3842 13 10.3842C14.4 10.3842 15.1 11.3842 15.1 13.2842C15.1 15.0842 15.1 19.9842 15.1 19.9842H19C19 19.9842 19 15.3842 19 11.8842C19 8.48418 17.1 6.78418 14.4 6.78418C11.7 6.78418 10.6 8.88418 10.6 8.88418V7.28418H6.80005V19.9842H10.6C10.6 19.9842 10.6 15.2842 10.6 13.2842Z"
+                      fill="#00C1C9"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="social-media-link"
+                  ><span class="visually-hidden">Facebook icon</span>
+                  <svg
+                    width="11"
+                    height="24"
+                    viewBox="0 0 11 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.4 23.9343H7V12.3343H10.2L10.5 8.43433H7C7 8.43433 7 6.93433 7 6.23433C7 5.33433 7.2 4.93433 8.1 4.93433C8.8 4.93433 10.6 4.93433 10.6 4.93433V0.934326C10.6 0.934326 8 0.934326 7.4 0.934326C4 0.934326 2.4 2.43433 2.4 5.33433C2.4 7.83433 2.4 8.43433 2.4 8.43433H0V12.3343H2.4V23.9343Z"
+                      fill="#00C1C9"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="social-media-link"
+                  ><span class="visually-hidden">You Tube icon</span>
+                  <svg
+                    width="32"
+                    height="23"
+                    viewBox="0 0 32 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3999 4.08433C30.0999 2.68433 28.9999 1.68433 27.6999 1.28433C25.3999 0.684326 15.7999 0.684326 15.7999 0.684326C15.7999 0.684326 6.29985 0.684326 3.89985 1.28433C2.59985 1.68433 1.59985 2.68433 1.19985 4.08433C0.599854 6.38433 0.599854 11.3843 0.599854 11.3843C0.599854 11.3843 0.599854 16.3843 1.19985 18.7843C1.59985 20.0843 2.59985 21.1843 3.89985 21.4843C6.29985 22.0843 15.7999 22.0843 15.7999 22.0843C15.7999 22.0843 25.2999 22.0843 27.6999 21.4843C28.9999 21.0843 29.9999 20.0843 30.3999 18.7843C30.9999 16.3843 30.9999 11.3843 30.9999 11.3843C30.9999 11.3843 31.0999 6.38433 30.3999 4.08433ZM12.6999 15.9843V6.88433L20.6999 11.3843L12.6999 15.9843Z"
+                      fill="#00C1C9"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="social-media-link"
+                  ><span class="visually-hidden">Instagram icon</span>
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.4999 2.24052C13.2999 2.24052 13.5999 2.24052 14.6999 2.33636C15.6999 2.33636 16.2999 2.52802 16.5999 2.71969C17.0999 2.91136 17.3999 3.10303 17.7999 3.48636C18.1999 3.8697 18.3999 4.1572 18.5999 4.63637C18.6999 5.01971 18.8999 5.49888 18.9999 6.45722C18.9999 7.51139 19.0999 7.79889 19.0999 10.4822C19.0999 13.1656 19.0999 13.4531 18.9999 14.5073C18.9999 15.4656 18.7999 16.0406 18.5999 16.3281C18.3999 16.8073 18.1999 17.0948 17.7999 17.4781C17.3999 17.8615 17.0999 18.0531 16.5999 18.2448C16.1999 18.3406 15.6999 18.5323 14.6999 18.6281C13.6999 18.6281 13.2999 18.6281 10.4999 18.6281C7.69986 18.6281 7.39986 18.6281 6.29986 18.5323C5.29986 18.5323 4.69986 18.3406 4.39986 18.149C3.89986 17.9573 3.59986 17.7656 3.19986 17.3823C2.79986 16.999 2.59986 16.7115 2.39986 16.2323C2.29986 15.8489 2.09986 15.3698 1.99986 14.4114C1.89986 13.3573 1.89986 13.0698 1.89986 10.3864C1.89986 7.70306 1.89986 7.41556 1.99986 6.36138C1.99986 5.40304 2.19986 4.82804 2.39986 4.54054C2.59986 4.06137 2.79986 3.77387 3.19986 3.39053C3.59986 3.00719 3.89986 2.81553 4.39986 2.62386C4.69986 2.52802 5.29986 2.33636 6.29986 2.24052C7.39986 2.24052 7.69986 2.24052 10.4999 2.24052ZM10.4999 0.419678C7.69986 0.419678 7.29986 0.419678 6.19986 0.515512C5.09986 0.515512 4.39986 0.70718 3.69986 0.898848C2.99986 1.18635 2.39986 1.56969 1.89986 2.14469C1.29985 2.62386 0.899854 3.19886 0.599854 3.8697C0.399854 4.54054 0.199854 5.21138 0.199854 6.26555C0.0998535 7.31972 0.0998535 7.70306 0.0998535 10.3864C0.0998535 13.0698 0.0998535 13.4531 0.199854 14.5073C0.299854 15.5614 0.399854 16.3281 0.699854 16.9031C0.999855 17.574 1.29985 18.149 1.89986 18.6281C2.49986 19.2031 3.09986 19.4906 3.69986 19.7781C4.39986 20.0656 5.09986 20.1615 6.19986 20.2573C7.29986 20.3531 7.69986 20.3531 10.4999 20.3531C13.2999 20.3531 13.6999 20.3531 14.7999 20.2573C15.8999 20.1615 16.6999 20.0656 17.2999 19.7781C17.9999 19.4906 18.5999 19.2031 19.0999 18.6281C19.6999 18.0531 19.9999 17.4781 20.2999 16.9031C20.5999 16.2323 20.6999 15.5614 20.7999 14.5073C20.8999 13.4531 20.8999 13.0698 20.8999 10.3864C20.8999 7.70306 20.8999 7.31972 20.7999 6.26555C20.6999 5.21138 20.5999 4.4447 20.2999 3.8697C19.9999 3.19886 19.6999 2.62386 19.0999 2.14469C18.4999 1.56969 17.8999 1.28218 17.2999 0.994681C16.5999 0.70718 15.8999 0.611346 14.7999 0.515512C13.6999 0.419678 13.3999 0.419678 10.4999 0.419678Z"
+                      fill="#00C1C9"
+                    />
+                    <path
+                      d="M10.4999 5.30737C7.49986 5.30737 5.09985 7.60754 5.09985 10.4827C5.09985 13.358 7.49986 15.6581 10.4999 15.6581C13.4999 15.6581 15.8999 13.358 15.8999 10.4827C15.8999 7.60754 13.4999 5.30737 10.4999 5.30737ZM10.4999 13.7413C8.59986 13.7413 6.99986 12.2079 6.99986 10.3869C7.09986 8.56594 8.59986 7.12834 10.4999 7.12834C12.3999 7.12834 13.9999 8.66178 13.9999 10.4827C13.9999 12.3037 12.4999 13.7413 10.4999 13.7413Z"
+                      fill="#00C1C9"
+                    />
+                    <path
+                      d="M17.4001 5.11571C17.4001 5.78655 16.8001 6.36156 16.1001 6.36156C15.4 6.36156 14.8 5.78655 14.8 5.11571C14.8 4.44488 15.4 3.86987 16.1001 3.86987C16.8001 3.86987 17.4001 4.44488 17.4001 5.11571Z"
+                      fill="#00C1C9"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="copyright-section">
+          <p>&copy; 2021 - Quanterall Academy, Varna, Bulgaria</p>
+          <a href="" class="policy-link">Cookie Policy</a>
+          <a href="" class="policy-link">Privacy Policy</a>
+        </section>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+    <script src="./accordion.js"></script>
+  </body>
+</html>
