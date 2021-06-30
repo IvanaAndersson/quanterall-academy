@@ -1559,11 +1559,11 @@ HOW TO ENROLL SECTION STYLES
         align-items: center; }
         .enroll-step p {
           margin-left: auto;
-          padding: 0.9rem 0 0.9rem 1rem; }
+          padding: 0.9rem 0 0.9rem 2rem; }
           .enroll-step p::before {
-            left: -1.5rem; }
+            left: -0.5rem; }
         .enroll-step.step-one p::before {
-          left: -0.75rem; }
+          left: 0.25rem; }
       .enroll .step-two {
         margin-top: 60px; }
       .enroll .step-three {
