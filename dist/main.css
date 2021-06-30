@@ -97,11 +97,11 @@ GRID VARIABLES
 .footer-content, .copyright-section, .buttons-container, .hero-content .container {
   flex-direction: column; }
 
-.button-secondary::before, .image-wrapper::after, .icon-wrapper::after, .teachers-detail:before, .teachers-detail-inside:before, .teachers-detail-outside:before, .about-bg-image::after {
+.button-secondary::before, .learning-page .introduction__image img, .image-wrapper::after, .icon-wrapper::after, .teachers-detail:before, .teachers-detail-inside:before, .teachers-detail-outside:before, .about-bg-image::after {
   display: block;
   content: ""; }
 
-.button-secondary::before {
+.button-secondary::before, .learning-page .introduction__image img {
   position: absolute;
   top: 0;
   left: 0; }
@@ -165,14 +165,20 @@ h4 {
 .nav-link {
   font-size: 1.0625rem; }
 
-.breadcrumb {
+.breadcrumb__link {
   font-size: 0.9375rem; }
   @media (min-width: 768px) {
-    .breadcrumb {
+    .breadcrumb__link {
       font-size: 1.25rem; } }
 
 .copyright-section {
   font-size: 0.75rem; }
+
+.learning-page p,
+.learning-page li,
+.lectors-page p,
+.lectors-page li {
+  line-height: 1.5; }
 
 /*  ===========
 
@@ -366,6 +372,43 @@ WHITE SPACE CLASSES
 @media (min-width: 1024px) {
   .enroll-steps-wrapper {
     margin-bottom: 70px; } }
+
+/* Page introduction section on Learning page, Lectors page, */
+.page-introduction {
+  padding-left: 40px;
+  padding-right: 40px; }
+  @media (min-width: 768px) {
+    .page-introduction {
+      width: calc(100% - 40px);
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 0; } }
+  @media (min-width: 1440px) {
+    .page-introduction {
+      width: calc(100% - 70px);
+      padding-left: 70px; } }
+
+.introduction__text {
+  padding: 20px 40px;
+  font-family: "Mont-Bold";
+  font-size: 1.25rem; }
+  .introduction__text p {
+    width: 95%; }
+
+.introduction__image {
+  position: relative; }
+
+@media (min-width: 768px) {
+  .introduction__text {
+    padding: 0; }
+    .introduction__text p {
+      width: 90%; } }
+
+@media (min-width: 1440px) {
+  .introduction__text {
+    font-size: 1.875rem; }
+    .introduction__text p {
+      width: 73%; } }
 
 /*
     IMPORT ALL LAYOUT STYLES NEXT, BUT PUT THEM BEFORE THE MORE SPECIFIC COMPONENT STYLES
@@ -588,6 +631,12 @@ WHITE SPACE CLASSES
   .offset-xl-5 {
     margin-left: 83.33333%; } }
 
+/*
+1. THE MAIN HEADER - LOGO + NAVIGATION STYLES
+2. HEADER SECTION ON ALL PAGES EXCEPT HOME STYLES
+*/
+/* ----------------------------------------- */
+/* THE SITE HEADER WHICH INCLUDES THE LOGO AND NAVIGATION */
 .site-header {
   position: fixed;
   top: 0;
@@ -613,6 +662,40 @@ WHITE SPACE CLASSES
 
 .header-logo svg {
   vertical-align: middle; }
+
+/* THE HEADER BANNER ON ALL PAGES EXCEPT THE HOME PAGE */
+.header__section {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+
+.header__banner {
+  width: 100%;
+  flex-grow: 1;
+  padding-top: 80px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.header__title {
+  font-family: "Mont-Regular";
+  margin-bottom: 0.5em; }
+  .header__title strong {
+    font-family: "Mont-Bold"; }
+
+@media (min-width: 1024px) {
+  .header__section {
+    min-height: 70vh; }
+  .header__title {
+    margin-bottom: 0.9em; } }
+
+@media (min-width: 1440px) {
+  .header__title {
+    margin-bottom: 50px; } }
 
 .site-footer {
   width: 100vw;
@@ -754,6 +837,11 @@ WHITE SPACE CLASSES
 /*
 IMPORT ALL COMPONENT STYLES
 */
+/*
+1. MAIN HEADER NAVIGATION STYLES
+2. BREADCRUMBS NAVIGATION STYLES
+*/
+/* ----------------------------------------- */
 /* 
 
 STYLES FOR THE HEADER NAVIGATION MENU ON MOBILE
@@ -884,6 +972,31 @@ STYLES FOR THE MENU ON LAPTOP AND DESKTOP
     transition: all 0.2s ease-in; }
     .nav-link:hover, .nav-link:focus, .nav-link.active {
       color: #00c1c9; } }
+
+/* THE BREADCRUMBS NAVIGATION ON ALL PAGES EXCEPT THE HOME PAGE */
+.breadcrumbs__nav {
+  width: 100%; }
+
+.breadcrumb__list {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.breadcrumb__item {
+  padding: 1.5em 0.5em 1.5em 0; }
+  .breadcrumb__item:first-child:after {
+    content: ">";
+    margin-left: 0.25em; }
+
+.breadcrumb__link {
+  color: #001b2a;
+  text-transform: uppercase; }
+  .breadcrumb__link.active {
+    color: #00c1c9; }
+
+@media (min-width: 768px) {
+  .breadcrumb__list {
+    margin-bottom: 1.111em; } }
 
 .button {
   text-transform: uppercase;
@@ -1158,7 +1271,8 @@ ABOUT SECTION STYLES
   width: 100vw;
   color: #ffffff;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15); }
   .about-bg-image {
     position: absolute;
     top: 50%;
@@ -1190,11 +1304,21 @@ ABOUT SECTION STYLES
     .about-text {
       font-size: 1.375rem; } }
   @media (min-width: 1440px) {
-    .about:after, .about-bg-image {
-      margin: 0 auto;
-      max-width: 75vw; }
-    .about-text {
-      font-size: 1.5rem; } }
+    .about {
+      width: 75vw;
+      min-height: 600px;
+      top: -3px;
+      left: 8px; }
+      .about:after, .about-bg-image {
+        margin: 0 auto;
+        max-width: 75vw; }
+      .about-content {
+        position: absolute;
+        top: 50%;
+        left: 7vw;
+        transform: translateY(-50%); }
+      .about-text {
+        font-size: 1.5rem; } }
 
 /*
 TEACHERS SECTION STYLES
@@ -1216,6 +1340,7 @@ TEACHERS SECTION STYLES
       .teachers .cards-wrapper {
         grid-gap: 5vw; } }
   .teachers-card {
+    color: #001b2a;
     display: block;
     margin-bottom: 20px;
     position: relative;
@@ -1268,7 +1393,9 @@ ACADEMY PARTNERS SECTION STYLES
 .partners {
   color: #ffffff;
   background: #001b2a;
-  padding: 40px; }
+  padding: 40px;
+  background: url("../../assets/PartnersSection.png") center no-repeat;
+  background-size: cover; }
   .partners .section-header {
     text-align: center;
     margin-bottom: 5rem; }
@@ -1381,11 +1508,14 @@ HOW TO ENROLL SECTION STYLES
   @media (min-width: 768px) {
     .enroll .section-header {
       text-align: center; }
+    .enroll .icon-wrapper {
+      max-width: 205px; }
     .enroll-steps-wrapper {
       display: grid;
       display: -ms-grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "step1 . step2" ". step3 ." "step4 . step5"; }
+      grid-template-areas: "step1 . step2" ". step3 ." "step4 . step5";
+      justify-content: center; }
     .enroll-step {
       align-self: flex-start; }
       .enroll-step p {
@@ -1430,8 +1560,10 @@ HOW TO ENROLL SECTION STYLES
         .enroll-step p {
           margin-left: auto;
           padding: 0.9rem 0 0.9rem 1rem; }
-        .enroll-step p::before, .enroll-step.step-one p::before {
-          left: -1.5rem; }
+          .enroll-step p::before {
+            left: -1.5rem; }
+        .enroll-step.step-one p::before {
+          left: -0.75rem; }
       .enroll .step-two {
         margin-top: 60px; }
       .enroll .step-three {
@@ -1561,3 +1693,379 @@ TESTIMONIALS SECTION STYLES
   .testimonial__avatar {
     max-width: 200px;
     max-height: 200px; } }
+
+.learning-page .header__banner {
+  background-image: url("../assets/learning-page/Hero Section.png"); }
+
+.learning-page .page-introduction {
+  background: #457d96; }
+
+.learning-page .section-header {
+  margin-bottom: 0.5em; }
+  .learning-page .section-header h2 {
+    font-size: 1.25rem;
+    text-shadow: none; }
+    @media (min-width: 1440px) {
+      .learning-page .section-header h2 {
+        font-size: 1.875rem; } }
+
+.learning-page .introduction__text {
+  color: #ffffff; }
+
+.learning-page .introduction__image {
+  overflow: hidden;
+  position: relative;
+  flex-basis: 42.5%;
+  max-width: 42.5%; }
+  .learning-page .introduction__image:after {
+    display: inline-block;
+    content: "";
+    padding-top: 59%; }
+  .learning-page .introduction__image img {
+    width: 100%;
+    height: auto; }
+
+@media (min-width: 1024px) {
+  .learning-page .introduction__image {
+    flex-basis: 37.5%;
+    max-width: 37.5%; } }
+
+@media (min-width: 1440px) {
+  .learning-page .introduction__image {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; } }
+
+@media (min-width: 1440px) {
+  .reasons-sign-up,
+  .know-how-accordion,
+  .who-can-join {
+    padding-top: 100px; } }
+
+.reasons-sign-up ul,
+.reasons-sign-up ol,
+.who-can-join ul,
+.who-can-join ol,
+.enroll-section ul,
+.enroll-section ol {
+  color: #457d96; }
+  .reasons-sign-up ul li,
+  .reasons-sign-up ol li,
+  .who-can-join ul li,
+  .who-can-join ol li,
+  .enroll-section ul li,
+  .enroll-section ol li {
+    padding: 0.8em 0 0.8em 1em;
+    border-bottom: 1px solid #457d96;
+    position: relative;
+    font-size: 1.125rem; }
+    .reasons-sign-up ul li:before,
+    .reasons-sign-up ol li:before,
+    .who-can-join ul li:before,
+    .who-can-join ol li:before,
+    .enroll-section ul li:before,
+    .enroll-section ol li:before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: #457d96;
+      border-radius: 50%;
+      position: absolute;
+      top: 25px;
+      left: 0; }
+    @media (min-width: 768px) {
+      .reasons-sign-up ul li,
+      .reasons-sign-up ol li,
+      .who-can-join ul li,
+      .who-can-join ol li,
+      .enroll-section ul li,
+      .enroll-section ol li {
+        border-bottom: 0;
+        padding: 0.25em 0 0.25em 0.9em; }
+        .reasons-sign-up ul li:before,
+        .reasons-sign-up ol li:before,
+        .who-can-join ul li:before,
+        .who-can-join ol li:before,
+        .enroll-section ul li:before,
+        .enroll-section ol li:before {
+          top: 15px; } }
+    @media (min-width: 1440px) {
+      .reasons-sign-up ul li,
+      .reasons-sign-up ol li,
+      .who-can-join ul li,
+      .who-can-join ol li,
+      .enroll-section ul li,
+      .enroll-section ol li {
+        font-size: 1.5625rem; }
+        .reasons-sign-up ul li:before,
+        .reasons-sign-up ol li:before,
+        .who-can-join ul li:before,
+        .who-can-join ol li:before,
+        .enroll-section ul li:before,
+        .enroll-section ol li:before {
+          top: 20px; } }
+
+.reasons__text-wrapper p {
+  font-size: 1.125rem;
+  margin-bottom: 0.5em; }
+
+.reasons__image {
+  margin-bottom: 1.25em; }
+
+@media (min-width: 768px) {
+  .reasons__wrapper {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: "heading image" "text image"; }
+    .reasons__wrapper p {
+      padding-bottom: 1.25em; }
+    .reasons__wrapper p,
+    .reasons__wrapper ul {
+      width: 90%; }
+    .reasons__wrapper .section-header {
+      grid-area: heading;
+      grid-column: 1 / span 4;
+      margin-bottom: 0;
+      padding-right: 20px; }
+  .reasons__text-wrapper {
+    grid-area: text;
+    grid-column: 1 / span 4;
+    padding-right: 20px; }
+  .reasons__image {
+    grid-area: image;
+    grid-column: 5 / span 3;
+    margin-bottom: 0em; }
+    .reasons__image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; } }
+
+@media (min-width: 1440px) {
+  .reasons__wrapper {
+    grid-template-columns: repeat(5, 1fr); }
+    .reasons__wrapper p {
+      margin-bottom: 2em; }
+    .reasons__wrapper .section-header {
+      grid-column: 1 / span 3; }
+  .reasons__text-wrapper {
+    grid-column: 1 / span 3; }
+  .reasons__image {
+    grid-column: 4 / span 2; } }
+
+.know-how-accordion .section-header {
+  margin-bottom: 1.5em; }
+  @media (min-width: 1024px) {
+    .know-how-accordion .section-header {
+      margin-bottom: 2.5em; } }
+
+.accordion__item {
+  margin-bottom: 2em; }
+
+.accordion__button {
+  font-size: 1.0625rem;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  text-transform: unset;
+  background: #00c1c9;
+  color: #ffffff;
+  padding: 20px;
+  padding-right: 4em;
+  position: relative;
+  transition: background 0.2s ease-in, color 0.2s ease-in; }
+  @media (min-width: 768px) {
+    .accordion__button {
+      font-size: 1.125rem; } }
+  @media (min-width: 1440px) {
+    .accordion__button {
+      font-size: 1.25rem; } }
+  .accordion__button::before, .accordion__button::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); }
+  .accordion__button::after {
+    transform: translateY(-50%) rotate(90deg); }
+  .accordion__button--active {
+    background: rgba(0, 193, 201, 0.15);
+    color: #001b2a;
+    transition: background 0.1s ease-in, color 0.1s ease-in; }
+    .accordion__button--active:before {
+      background-color: #001b2a; }
+    .accordion__button--active:after {
+      display: none; }
+
+.accordion__body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-in;
+  padding-top: 0.8em; }
+  @media (min-width: 1440px) {
+    .accordion__body {
+      font-size: 1.25rem; } }
+
+.developers__list {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.125rem;
+  line-height: 1.7; }
+  .developers__list .section-header {
+    margin-bottom: 0; }
+  .developers__list strong {
+    font-family: "Mont-SemiBold"; }
+  @media (min-width: 768px) {
+    .developers__list {
+      padding-left: 20px; } }
+  @media (min-width: 1440px) {
+    .developers__list {
+      font-size: 1.5625rem; } }
+
+.joining__info {
+  background: #001b2a;
+  color: #ffffff;
+  padding: 1.25em; }
+  .joining__info p:first-of-type {
+    margin-bottom: 1em; }
+  .joining__info--bolded {
+    font-size: 1.125rem;
+    font-family: "Mont-Bold"; }
+  @media (min-width: 768px) {
+    .joining__info {
+      order: -1; }
+      .joining__info p:first-of-type {
+        margin-bottom: 1.5em; } }
+  @media (min-width: 1440px) {
+    .joining__info {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      padding: 2.5em; } }
+
+.enroll-section {
+  padding: 40px 40px 0 40px; }
+  .enroll-section ol {
+    margin-bottom: 2em; }
+    .enroll-section ol li {
+      font-family: "Mont-SemiBold";
+      font-size: 1.125rem;
+      text-align: start; }
+      .enroll-section ol li:before {
+        content: "1.";
+        width: 0;
+        height: 0;
+        font-family: "Mont-Bold";
+        line-height: 1.7;
+        top: 13px; }
+      .enroll-section ol li:nth-child(2):before {
+        content: "2."; }
+      .enroll-section ol li:nth-child(3):before {
+        content: "3."; }
+      .enroll-section ol li:nth-child(4):before {
+        content: "4."; }
+      .enroll-section ol li:nth-child(5):before {
+        content: "5."; }
+  .enroll-section .buttons-container {
+    text-align: center;
+    margin-bottom: 1em; }
+  .enroll-section .enroll-text {
+    margin-bottom: 1em; }
+  .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none; }
+  @media (min-width: 768px) {
+    .enroll-section {
+      padding: 5em 40px; }
+      .enroll-section .section-header h2 {
+        margin-bottom: 1em; }
+      .enroll-section ol li {
+        padding: 0.4em 0 0.4em 1.25em; }
+        .enroll-section ol li:before {
+          top: 6px; }
+      .enroll-section .buttons-container {
+        width: 70%;
+        align-items: unset;
+        flex-direction: column; }
+        .enroll-section .buttons-container .button {
+          margin-bottom: 1.5em; }
+          .enroll-section .buttons-container .button:first-child {
+            margin-right: 0; }
+      .enroll-section .enroll-text {
+        width: 90%; } }
+  @media (min-width: 1024px) {
+    .enroll-section ol li {
+      padding: 0.5em 0 0.5em 1.25em; }
+      .enroll-section ol li:before {
+        top: 8px; } }
+  @media (min-width: 1440px) {
+    .enroll-section {
+      padding: 0;
+      position: relative; }
+      .enroll-section .section-header {
+        padding: 6em 70px 0; }
+      .enroll-section ol li {
+        font-size: 1.5625rem; }
+        .enroll-section ol li:before {
+          top: 11px; }
+      .enroll-section .enroll-cta {
+        background-color: rgba(69, 125, 150, 0.15);
+        padding: 4em 70px 6em; }
+      .enroll-section .enroll-text {
+        font-size: 1.5625rem; }
+      .enroll-section .image-wrapper, .enroll-section .icon-wrapper {
+        position: absolute;
+        top: 10em;
+        bottom: 6em;
+        right: 70px; }
+        .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
+          left: 70%; }
+      .enroll-section .buttons-container {
+        width: auto;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 4em; }
+        .enroll-section .buttons-container .button {
+          width: auto;
+          margin-bottom: 0; }
+          .enroll-section .buttons-container .button:first-child {
+            margin-right: 2em; } }
+
+.lectors-page .header__banner {
+  background-image: url("../assets/lectors-page/Hero Section.png"); }
+
+.lectors-page .page-introduction {
+  background: 0;
+  margin-bottom: 1.5em; }
+  .lectors-page .page-introduction .image-wrapper img, .lectors-page .page-introduction .icon-wrapper img {
+    width: auto;
+    height: 100%; }
+  .lectors-page .page-introduction .image-wrapper:after, .lectors-page .page-introduction .icon-wrapper:after {
+    padding-bottom: 125%; }
+
+.lectors-page .introduction__text {
+  background: #e6e6c8;
+  color: #001b2a;
+  margin-left: -40px;
+  margin-right: -40px; }
+
+.lectors-page .introduction__image {
+  margin-bottom: 2.5em; }
+
+.lector {
+  border-bottom: 1px solid rgba(0, 27, 42, 0.2);
+  padding: 1.5em 0; }
+  .lector__image {
+    margin-bottom: 1.5em; }
+  .lector__info {
+    font-family: "Inter";
+    font-size: 1.0625rem; }
+    .lector__info--name, .lector__info--speciality {
+      font-size: 1.125rem;
+      color: #457d96;
+      text-transform: uppercase; }
+    .lector__info--name,
+    .lector__info strong {
+      font-weight: 800; }
