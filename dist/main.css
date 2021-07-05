@@ -291,33 +291,6 @@ WHITE SPACE CLASSES
 .p-2 {
   padding: 2rem; }
 
-/*THE DESIGN GUIDELINES ARE:
- DESKTOP - 1920 - 6 column grid, 70px margin on both sides, grid gap = 20px
-        desktop max content is 1780px
- TABLET & LAPTOP - 768/1024 - 8 column grid, 40px margin on both sides, grid gap = 20px
-        tablet max content is 944px
- MOBILE - 414 - 5 column grid, 40px margin on both sides, grid gap = 20px
-        mobile max content is 334px
-*/
-:root {
-  --container-width: 100vw;
-  --grid-columns: 5;
-  --grid-gutters: calc(var(--grid-columns) - 1);
-  --grid-gutter-width: 20;
-  --gutters-total-width: calc(calc(var(--grid-gutters) * var(--grid-gutter-width)) * 1px)
-  --clean-column-width: calc(var(--container-width) - var(--gutters-total-width))
-  --grid-column-width: calc(var(--clean-column-width) / var(--grid-columns));
-  --column-and-gutter-unit: calc(var(--grid-column-width) + var(--gutters-total-width)); }
-
-@media (min-width: 768px) {
-  :root {
-    --grid-columns: 8; } }
-
-@media (min-width: 1440px) {
-  :root {
-    --grid-columns: 6;
-    --container-width: calc(100vw - 140px); } }
-
 .container {
   padding-left: 40px;
   padding-right: 40px;
@@ -364,6 +337,18 @@ WHITE SPACE CLASSES
 @media (min-width: 1024px) {
   .section-header {
     margin-bottom: 50px; } }
+
+.learning-page .section-header,
+.lectors-page .section-header {
+  margin-bottom: 0.5em; }
+  .learning-page .section-header h2,
+  .lectors-page .section-header h2 {
+    font-size: 1.25rem;
+    text-shadow: none; }
+    @media (min-width: 1440px) {
+      .learning-page .section-header h2,
+      .lectors-page .section-header h2 {
+        font-size: 1.875rem; } }
 
 @media (min-width: 768px) {
   .enroll-steps-wrapper {
@@ -686,6 +671,10 @@ WHITE SPACE CLASSES
   margin-bottom: 0.5em; }
   .header__title strong {
     font-family: "Mont-Bold"; }
+
+@media (min-width: 768px) {
+  .header__section {
+    min-height: 50vh; } }
 
 @media (min-width: 1024px) {
   .header__section {
@@ -1071,22 +1060,26 @@ STYLES FOR THE MENU ON LAPTOP AND DESKTOP
     transform: translate(-50%, -50%); }
 
 .icon-wrapper::after {
-  padding-bottom: 100%; }
+  padding-bottom: 80%; }
 
 .teachers-detail, .teachers-detail-inside, .teachers-detail-outside {
   position: relative; }
   .teachers-detail:before, .teachers-detail-inside:before, .teachers-detail-outside:before {
     position: absolute;
     top: 0;
-    background: #00c1c9;
     width: 20px;
     height: 60px;
     clip-path: polygon(0 0, 50% 0%, 100% 30%, 0 100%);
     z-index: 10; }
   .teachers-detail-inside::before {
+    background: #00c1c9;
     left: 0; }
   .teachers-detail-outside::before {
-    left: 100%; }
+    background: #001b2a;
+    right: 0; }
+    @media (min-width: 1440px) {
+      .teachers-detail-outside::before {
+        right: 2px; } }
 
 .carousel {
   margin: 0 auto;
@@ -1523,17 +1516,18 @@ HOW TO ENROLL SECTION STYLES
         font-family: "Mont-Bold";
         font-size: 0.9375rem;
         border: 0;
-        padding: 0.9rem 0 0.9rem 2rem; }
+        padding: 0.5rem 0 0.5rem 2.5rem; }
         .enroll-step p::before {
           top: auto;
-          bottom: 0;
-          left: -0.5rem;
+          bottom: -9px;
+          left: 0;
           font-size: 4.13em;
           color: #00c1c9; }
     .enroll .step-one {
       grid-area: step1; }
       .enroll .step-one p {
-        border-top: 0; }
+        border-top: 0;
+        padding: 0.5rem 0 0.5rem 2rem; }
         .enroll .step-one p::before {
           left: 0.5rem; }
     .enroll .step-two {
@@ -1559,21 +1553,22 @@ HOW TO ENROLL SECTION STYLES
         align-items: center; }
         .enroll-step p {
           margin-left: auto;
-          padding: 0.9rem 0 0.9rem 2rem; }
+          padding: 0.25rem 0 0.25rem 2.5rem; }
           .enroll-step p::before {
-            left: -0.5rem; }
-        .enroll-step.step-one p::before {
-          left: 0.25rem; }
+            left: 0rem;
+            bottom: -13px; }
+        .enroll-step.step-one p {
+          padding: 0.25rem 0 0.25rem 2rem; }
+          .enroll-step.step-one p::before {
+            left: 0.25rem; }
       .enroll .step-two {
         margin-top: 60px; }
       .enroll .step-three {
         margin-top: 120px; }
       .enroll .step-four {
-        margin-top: 60px;
-        margin-left: 12%; }
+        margin-top: 60px; }
       .enroll .step-five {
-        margin-top: 120px;
-        margin-left: 6%; } }
+        margin-top: 120px; } }
   .enroll-shape {
     width: 100vw;
     height: 120vh;
@@ -1699,15 +1694,6 @@ TESTIMONIALS SECTION STYLES
 
 .learning-page .page-introduction {
   background: #457d96; }
-
-.learning-page .section-header {
-  margin-bottom: 0.5em; }
-  .learning-page .section-header h2 {
-    font-size: 1.25rem;
-    text-shadow: none; }
-    @media (min-width: 1440px) {
-      .learning-page .section-header h2 {
-        font-size: 1.875rem; } }
 
 .learning-page .introduction__text {
   color: #ffffff; }
@@ -2044,6 +2030,21 @@ TESTIMONIALS SECTION STYLES
     height: 100%; }
   .lectors-page .page-introduction .image-wrapper:after, .lectors-page .page-introduction .icon-wrapper:after {
     padding-bottom: 125%; }
+    @media screen and (min-width: 1930px) {
+      .lectors-page .page-introduction .image-wrapper:after, .lectors-page .page-introduction .icon-wrapper:after {
+        padding-bottom: 100%; } }
+  @media (min-width: 768px) {
+    .lectors-page .page-introduction {
+      margin-bottom: 4em;
+      display: grid;
+      display: -ms-grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-areas: "intro intro image" "subtext subtext image";
+      align-items: start; } }
+  @media (min-width: 1440px) {
+    .lectors-page .page-introduction {
+      margin-bottom: 5em;
+      grid-template-columns: repeat(6, 1fr); } }
 
 .lectors-page .introduction__text {
   background: #e6e6c8;
@@ -2054,9 +2055,80 @@ TESTIMONIALS SECTION STYLES
 .lectors-page .introduction__image {
   margin-bottom: 2.5em; }
 
+@media (min-width: 768px) {
+  .lectors-page .introduction__text {
+    margin-right: 0;
+    padding: 3em 1em 3em 40px;
+    grid-area: intro;
+    grid-column: 1 / span 5; }
+    .lectors-page .introduction__text-subtext {
+      grid-area: subtext;
+      grid-column: 1 / span 5;
+      padding: 1em 1em 0 0; }
+  .lectors-page .introduction__image {
+    margin-bottom: 0;
+    grid-area: image;
+    grid-column: 6 / span 3; } }
+
+@media (min-width: 1024px) {
+  .lectors-page .introduction__text {
+    margin-left: -35%;
+    padding-left: 35%; }
+    .lectors-page .introduction__text, .lectors-page .introduction__text-subtext {
+      grid-column: 2 / span 4; } }
+
+@media (min-width: 1440px) {
+  .lectors-page .introduction__text {
+    margin-left: -50%;
+    padding-left: 50%; }
+    .lectors-page .introduction__text, .lectors-page .introduction__text-subtext {
+      grid-column: 2 / span 3; }
+      .lectors-page .introduction__text p, .lectors-page .introduction__text-subtext p {
+        width: 90%; }
+    .lectors-page .introduction__text-subtext {
+      font-size: 1.5625rem; }
+  .lectors-page .introduction__image {
+    grid-column: 5 / span 2; }
+    .lectors-page .introduction__image img {
+      max-height: 700px;
+      transform: none;
+      top: 0;
+      left: 0; } }
+
+.lectors-page .enroll-section {
+  padding: 0; }
+  @media (min-width: 768px) {
+    .lectors-page .enroll-section .section-header {
+      padding: 0 40px; } }
+
+.lectors-page .enroll-cta {
+  background-color: #e6e6c8;
+  padding: 2em 2em 3.5em;
+  position: relative; }
+  @media (min-width: 768px) {
+    .lectors-page .enroll-cta .image-wrapper, .lectors-page .enroll-cta .icon-wrapper {
+      position: absolute;
+      bottom: 0;
+      top: -5em;
+      right: 40px; } }
+  @media (min-width: 1440px) {
+    .lectors-page .enroll-cta {
+      padding: 4em 4em 5.5em; }
+      .lectors-page .enroll-cta .image-wrapper, .lectors-page .enroll-cta .icon-wrapper {
+        top: -14em;
+        right: 70px;
+        max-width: 30%; }
+        .lectors-page .enroll-cta .image-wrapper img, .lectors-page .enroll-cta .icon-wrapper img {
+          left: 60%; } }
+
 .lector {
   border-bottom: 1px solid rgba(0, 27, 42, 0.2);
   padding: 1.5em 0; }
+  .lectors-section p,
+  .lectors-section ul {
+    margin-bottom: 0.3em; }
+  .lectors-section .lector__info--name {
+    margin-bottom: 0; }
   .lector__image {
     margin-bottom: 1.5em; }
   .lector__info {
@@ -2069,3 +2141,85 @@ TESTIMONIALS SECTION STYLES
     .lector__info--name,
     .lector__info strong {
       font-weight: 800; }
+  .lectors-outro {
+    padding: 1.5em 0; }
+    .lectors-outro p {
+      margin-bottom: 0.5em; }
+  @media (min-width: 768px) {
+    .lector {
+      border-bottom: 0; }
+      .lectors-section {
+        margin-bottom: 4.5em; }
+      .lector__image {
+        align-self: flex-start; }
+        .lector__image img {
+          width: calc(100% - 20px);
+          transform: none;
+          top: 0;
+          left: 0; }
+      .lector__info {
+        padding-right: 4em; } }
+  @media (min-width: 1440px) {
+    .lector:last-of-type {
+      margin-bottom: 4em; }
+    .lector__image img {
+      width: auto;
+      height: 100%; } }
+
+.academy-pros .section-header {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+@media (min-width: 768px) {
+  .academy-pros {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 5em; } }
+
+@media (min-width: 1024px) {
+  .academy-pros {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding: 0 40px; } }
+
+@media (min-width: 1440px) {
+  .academy-pros {
+    margin-bottom: 15em; } }
+
+.card-academy-pro {
+  text-align: center;
+  font-family: "Mont-Bold";
+  font-size: 1.125rem;
+  color: #457d96;
+  border-bottom: 1px solid rgba(0, 27, 42, 0.2);
+  padding: 2.22em 0; }
+  .card-academy-pro .icon-wrapper::after {
+    padding-bottom: 35%; }
+  .card-academy-pro .icon-wrapper svg {
+    height: 100%;
+    width: auto;
+    max-width: 45%; }
+  .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
+    width: 50%;
+    margin: 0 auto; }
+  @media (min-width: 768px) {
+    .card-academy-pro {
+      border-bottom: 0;
+      flex-basis: 33.33%; }
+      .card-academy-pro p {
+        padding: 0.5em 0; }
+      .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
+        width: 85%; } }
+  @media (min-width: 1440px) {
+    .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
+      width: 75%; }
+    .card-academy-pro .icon-wrapper {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      right: unset; }
+      .card-academy-pro .icon-wrapper svg {
+        max-width: 180px; } }
+  @media screen and (min-width: 1750px) {
+    .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
+      width: 60%; } }
