@@ -1074,12 +1074,13 @@ STYLES FOR THE MENU ON LAPTOP AND DESKTOP
   .teachers-detail-inside::before {
     background: #00c1c9;
     left: 0; }
-  .teachers-detail-outside::before {
-    background: #001b2a;
-    right: 0; }
-    @media (min-width: 1440px) {
-      .teachers-detail-outside::before {
-        right: 2px; } }
+  @media (min-width: 768px) {
+    .teachers-detail-outside::before {
+      background: #001b2a;
+      right: 0; } }
+  @media (min-width: 1440px) {
+    .teachers-detail-outside::before {
+      right: 2px; } }
 
 .carousel {
   margin: 0 auto;
@@ -1255,6 +1256,8 @@ COMPANY SPECIALIZATION SECTION STYLES
 
 .shape {
   position: absolute;
+  top: -90px;
+  left: -10px;
   z-index: -1; }
 
 /*
@@ -1273,7 +1276,7 @@ ABOUT SECTION STYLES
     width: 100%;
     height: 100%;
     background: #001b2a;
-    z-index: -1; }
+    z-index: 0; }
     .about-bg-image::after {
       padding-bottom: 100%; }
     .about-bg-image img {
@@ -1351,7 +1354,7 @@ TEACHERS SECTION STYLES
     width: 734px;
     height: 800px;
     position: absolute;
-    top: 60%;
+    top: 35%;
     right: 0;
     background: url("../assets/shapes/teachers-shape.png") left 50% no-repeat;
     background-size: cover;
@@ -1574,8 +1577,8 @@ HOW TO ENROLL SECTION STYLES
     @media (min-width: 1440px) {
       .enroll-shape {
         width: 100vw;
-        height: 180vh;
-        top: -6%;
+        height: 200vh;
+        top: -25%;
         left: -25%; } }
 
 /*
@@ -2086,9 +2089,8 @@ TESTIMONIALS SECTION STYLES
 
 .lectors-page .enroll-section {
   padding: 0; }
-  @media (min-width: 768px) {
-    .lectors-page .enroll-section .section-header {
-      padding: 0 40px; } }
+  .lectors-page .enroll-section .section-header {
+    padding: 0 40px; }
 
 .lectors-page .enroll-cta {
   background-color: #e6e6c8;
@@ -2153,17 +2155,17 @@ TESTIMONIALS SECTION STYLES
       margin-bottom: 4em; }
     .lector__image img {
       width: auto;
-      height: 100%; } }
-
-.academy-pros .section-header {
-  padding-left: 40px;
-  padding-right: 40px; }
+      height: 100%; }
+    .lectors-outro {
+      font-size: 1.5625rem; } }
 
 @media (min-width: 768px) {
   .academy-pros {
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 5em; } }
+    margin-bottom: 5em;
+    display: flex;
+    flex-wrap: wrap; } }
 
 @media (min-width: 1024px) {
   .academy-pros {
@@ -2207,6 +2209,8 @@ TESTIMONIALS SECTION STYLES
       top: unset;
       bottom: unset;
       right: unset; }
+      .card-academy-pro .icon-wrapper::after {
+        padding-bottom: 25%; }
       .card-academy-pro .icon-wrapper svg {
         max-width: 180px; } }
   @media screen and (min-width: 1750px) {
