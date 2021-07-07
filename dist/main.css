@@ -339,15 +339,18 @@ WHITE SPACE CLASSES
     margin-bottom: 50px; } }
 
 .learning-page .section-header,
-.lectors-page .section-header {
+.lectors-page .section-header,
+.schedule-page .section-header {
   margin-bottom: 0.5em; }
   .learning-page .section-header h2,
-  .lectors-page .section-header h2 {
+  .lectors-page .section-header h2,
+  .schedule-page .section-header h2 {
     font-size: 1.25rem;
     text-shadow: none; }
     @media (min-width: 1440px) {
       .learning-page .section-header h2,
-      .lectors-page .section-header h2 {
+      .lectors-page .section-header h2,
+      .schedule-page .section-header h2 {
         font-size: 1.875rem; } }
 
 @media (min-width: 768px) {
@@ -357,43 +360,6 @@ WHITE SPACE CLASSES
 @media (min-width: 1024px) {
   .enroll-steps-wrapper {
     margin-bottom: 70px; } }
-
-/* Page introduction section on Learning page, Lectors page, */
-.page-introduction {
-  padding-left: 40px;
-  padding-right: 40px; }
-  @media (min-width: 768px) {
-    .page-introduction {
-      width: calc(100% - 40px);
-      justify-content: space-between;
-      align-items: center;
-      padding-right: 0; } }
-  @media (min-width: 1440px) {
-    .page-introduction {
-      width: calc(100% - 70px);
-      padding-left: 70px; } }
-
-.introduction__text {
-  padding: 20px 40px;
-  font-family: "Mont-Bold";
-  font-size: 1.25rem; }
-  .introduction__text p {
-    width: 95%; }
-
-.introduction__image {
-  position: relative; }
-
-@media (min-width: 768px) {
-  .introduction__text {
-    padding: 0; }
-    .introduction__text p {
-      width: 90%; } }
-
-@media (min-width: 1440px) {
-  .introduction__text {
-    font-size: 1.875rem; }
-    .introduction__text p {
-      width: 73%; } }
 
 /*
     IMPORT ALL LAYOUT STYLES NEXT, BUT PUT THEM BEFORE THE MORE SPECIFIC COMPONENT STYLES
@@ -667,10 +633,8 @@ WHITE SPACE CLASSES
   background-position: center; }
 
 .header__title {
-  font-family: "Mont-Regular";
+  font-family: "Mont-Bold";
   margin-bottom: 0.5em; }
-  .header__title strong {
-    font-family: "Mont-Bold"; }
 
 @media (min-width: 768px) {
   .header__section {
@@ -685,6 +649,12 @@ WHITE SPACE CLASSES
 @media (min-width: 1440px) {
   .header__title {
     margin-bottom: 50px; } }
+
+.learning-page .header__title {
+  font-family: "Mont-Regular";
+  margin-bottom: 0.5em; }
+  .learning-page .header__title strong {
+    font-family: "Mont-Bold"; }
 
 .site-footer {
   width: 100vw;
@@ -1117,6 +1087,133 @@ STYLES FOR THE MENU ON LAPTOP AND DESKTOP
       cursor: pointer; }
       .carousel .carousel__nav .carousel__indicator.current-slide {
         background: #00c1c9; }
+
+/* Page introduction section on Learning page, Lectors page, */
+.page-introduction {
+  padding-left: 40px;
+  padding-right: 40px; }
+  @media (min-width: 768px) {
+    .page-introduction {
+      width: calc(100% - 40px);
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 0; } }
+  @media (min-width: 1440px) {
+    .page-introduction {
+      width: calc(100% - 70px);
+      padding-left: 70px; } }
+
+.introduction__text {
+  padding: 20px 40px;
+  font-family: "Mont-Bold";
+  font-size: 1.25rem; }
+  .introduction__text p {
+    width: 95%; }
+
+.introduction__image {
+  position: relative; }
+
+@media (min-width: 768px) {
+  .introduction__text {
+    padding: 0; }
+    .introduction__text p {
+      width: 90%; } }
+
+@media (min-width: 1440px) {
+  .introduction__text {
+    font-size: 1.875rem; }
+    .introduction__text p {
+      width: 73%; } }
+
+/* Enroll section on Learning page, Lectors page, and Schedule page */
+.enroll-section {
+  padding: 40px 40px 0 40px; }
+  .enroll-section .buttons-container {
+    text-align: center;
+    margin-bottom: 1em; }
+  .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none; }
+
+.enroll-text {
+  margin-bottom: 1em; }
+
+@media (min-width: 768px) {
+  .enroll-section {
+    padding: 5em 40px; }
+    .enroll-section .section-header h2 {
+      margin-bottom: 1em; }
+    .enroll-section .buttons-container {
+      width: 70%;
+      align-items: unset;
+      flex-direction: column; }
+      .enroll-section .buttons-container .button {
+        margin-bottom: 1.5em; }
+        .enroll-section .buttons-container .button:first-child {
+          margin-right: 0; }
+  .enroll-text {
+    width: 90%; } }
+
+@media (min-width: 1440px) {
+  .enroll-section {
+    position: relative; }
+    .enroll-section .image-wrapper, .enroll-section .icon-wrapper {
+      position: absolute;
+      top: 10em;
+      bottom: 6em;
+      right: 70px; }
+      .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
+        left: 70%; }
+    .enroll-section .buttons-container {
+      width: auto;
+      align-items: center;
+      flex-direction: row;
+      margin-bottom: 4em; }
+      .enroll-section .buttons-container .button {
+        width: auto;
+        margin-bottom: 0; }
+        .enroll-section .buttons-container .button:first-child {
+          margin-right: 2em; }
+  .enroll-text {
+    font-size: 1.5625rem; } }
+
+/* Academy pros icons and text, inside the Enroll section on Lectors and Schedule */
+@media (min-width: 768px) {
+  .academy-pros {
+    display: flex;
+    flex-wrap: wrap; } }
+
+.card-academy-pro {
+  text-align: center;
+  font-family: "Mont-Bold";
+  font-size: 1.125rem;
+  color: #457d96;
+  border-bottom: 1px solid rgba(0, 27, 42, 0.2);
+  padding: 2.22em 0; }
+  .card-academy-pro .icon-wrapper::after {
+    padding-bottom: 35%; }
+  .card-academy-pro .icon-wrapper svg {
+    height: 100%;
+    width: auto;
+    max-width: 45%; }
+  .card-academy-pro p {
+    margin: 0 auto; }
+  @media (min-width: 768px) {
+    .card-academy-pro {
+      border-bottom: 0; }
+      .card-academy-pro p {
+        padding: 0.5em 0; } }
+  @media (min-width: 1440px) {
+    .card-academy-pro .icon-wrapper {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      right: unset; }
+      .card-academy-pro .icon-wrapper::after {
+        padding-bottom: 25%; }
+      .card-academy-pro .icon-wrapper svg {
+        max-width: 180px; } }
 
 /*
     IMPORT ALL STYLES FOR THE PAGES
@@ -1713,6 +1810,55 @@ TESTIMONIALS SECTION STYLES
     flex-basis: 33.33333%;
     max-width: 33.33333%; } }
 
+.learning-page .enroll-section ol {
+  margin-bottom: 2em; }
+  .learning-page .enroll-section ol li {
+    font-family: "Mont-SemiBold";
+    font-size: 1.125rem;
+    text-align: start; }
+    .learning-page .enroll-section ol li:before {
+      content: "1.";
+      width: 0;
+      height: 0;
+      font-family: "Mont-Bold";
+      line-height: 1.7;
+      top: 13px; }
+    .learning-page .enroll-section ol li:nth-child(2):before {
+      content: "2."; }
+    .learning-page .enroll-section ol li:nth-child(3):before {
+      content: "3."; }
+    .learning-page .enroll-section ol li:nth-child(4):before {
+      content: "4."; }
+    .learning-page .enroll-section ol li:nth-child(5):before {
+      content: "5."; }
+
+@media (min-width: 768px) {
+  .learning-page .enroll-section ol li {
+    padding: 0.4em 0 0.4em 1.25em; }
+    .learning-page .enroll-section ol li:before {
+      top: 6px; } }
+
+@media (min-width: 1024px) {
+  .learning-page .enroll-section ol li {
+    padding: 0.5em 0 0.5em 1.25em; }
+    .learning-page .enroll-section ol li:before {
+      top: 8px; } }
+
+@media (min-width: 1440px) {
+  .learning-page .enroll-section {
+    padding: 0; }
+    .learning-page .enroll-section .section-header {
+      padding: 6em 70px 0; }
+    .learning-page .enroll-section ol li {
+      font-size: 1.5625rem; }
+      .learning-page .enroll-section ol li:before {
+        top: 11px; } }
+
+@media (min-width: 1440px) {
+  .learning-page .enroll-cta {
+    background-color: rgba(69, 125, 150, 0.15);
+    padding: 4em 70px 6em; } }
+
 @media (min-width: 1440px) {
   .reasons-sign-up,
   .know-how-accordion,
@@ -1922,95 +2068,6 @@ TESTIMONIALS SECTION STYLES
       line-height: 1.8;
       padding: 2.5em; } }
 
-.enroll-section {
-  padding: 40px 40px 0 40px; }
-  .enroll-section ol {
-    margin-bottom: 2em; }
-    .enroll-section ol li {
-      font-family: "Mont-SemiBold";
-      font-size: 1.125rem;
-      text-align: start; }
-      .enroll-section ol li:before {
-        content: "1.";
-        width: 0;
-        height: 0;
-        font-family: "Mont-Bold";
-        line-height: 1.7;
-        top: 13px; }
-      .enroll-section ol li:nth-child(2):before {
-        content: "2."; }
-      .enroll-section ol li:nth-child(3):before {
-        content: "3."; }
-      .enroll-section ol li:nth-child(4):before {
-        content: "4."; }
-      .enroll-section ol li:nth-child(5):before {
-        content: "5."; }
-  .enroll-section .buttons-container {
-    text-align: center;
-    margin-bottom: 1em; }
-  .enroll-section .enroll-text {
-    margin-bottom: 1em; }
-  .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
-    width: auto;
-    height: 100%;
-    max-width: none; }
-  @media (min-width: 768px) {
-    .enroll-section {
-      padding: 5em 40px; }
-      .enroll-section .section-header h2 {
-        margin-bottom: 1em; }
-      .enroll-section ol li {
-        padding: 0.4em 0 0.4em 1.25em; }
-        .enroll-section ol li:before {
-          top: 6px; }
-      .enroll-section .buttons-container {
-        width: 70%;
-        align-items: unset;
-        flex-direction: column; }
-        .enroll-section .buttons-container .button {
-          margin-bottom: 1.5em; }
-          .enroll-section .buttons-container .button:first-child {
-            margin-right: 0; }
-      .enroll-section .enroll-text {
-        width: 90%; } }
-  @media (min-width: 1024px) {
-    .enroll-section ol li {
-      padding: 0.5em 0 0.5em 1.25em; }
-      .enroll-section ol li:before {
-        top: 8px; } }
-  @media (min-width: 1440px) {
-    .enroll-section {
-      padding: 0;
-      position: relative; }
-      .enroll-section .section-header {
-        padding: 6em 70px 0; }
-      .enroll-section ol li {
-        font-size: 1.5625rem; }
-        .enroll-section ol li:before {
-          top: 11px; }
-      .enroll-section .enroll-cta {
-        background-color: rgba(69, 125, 150, 0.15);
-        padding: 4em 70px 6em; }
-      .enroll-section .enroll-text {
-        font-size: 1.5625rem; }
-      .enroll-section .image-wrapper, .enroll-section .icon-wrapper {
-        position: absolute;
-        top: 10em;
-        bottom: 6em;
-        right: 70px; }
-        .enroll-section .image-wrapper img, .enroll-section .icon-wrapper img {
-          left: 70%; }
-      .enroll-section .buttons-container {
-        width: auto;
-        align-items: center;
-        flex-direction: row;
-        margin-bottom: 4em; }
-        .enroll-section .buttons-container .button {
-          width: auto;
-          margin-bottom: 0; }
-          .enroll-section .buttons-container .button:first-child {
-            margin-right: 2em; } }
-
 .lectors-page .header__banner {
   background-image: url("../assets/lectors-page/Hero Section.png"); }
 
@@ -2112,6 +2169,39 @@ TESTIMONIALS SECTION STYLES
         .lectors-page .enroll-cta .image-wrapper img, .lectors-page .enroll-cta .icon-wrapper img {
           left: 60%; } }
 
+@media (min-width: 768px) {
+  .lectors-page .academy-pros {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 5em; } }
+
+@media (min-width: 1024px) {
+  .lectors-page .academy-pros {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding: 0 40px; } }
+
+@media (min-width: 1440px) {
+  .lectors-page .academy-pros {
+    margin-bottom: 15em; } }
+
+.lectors-page .card-academy-pro:nth-of-type(4) p, .lectors-page .card-academy-pro:nth-of-type(5) p {
+  width: 50%; }
+
+@media (min-width: 768px) {
+  .lectors-page .card-academy-pro {
+    flex-basis: 33.33%; }
+    .lectors-page .card-academy-pro:nth-of-type(4) p, .lectors-page .card-academy-pro:nth-of-type(5) p {
+      width: 85%; } }
+
+@media (min-width: 1440px) {
+  .lectors-page .card-academy-pro:nth-of-type(4) p, .lectors-page .card-academy-pro:nth-of-type(5) p {
+    width: 75%; } }
+
+@media screen and (min-width: 1750px) {
+  .lectors-page .card-academy-pro:nth-of-type(4) p, .lectors-page .card-academy-pro:nth-of-type(5) p {
+    width: 60%; } }
+
 .lector {
   border-bottom: 1px solid rgba(0, 27, 42, 0.2);
   padding: 1.5em 0; }
@@ -2159,60 +2249,153 @@ TESTIMONIALS SECTION STYLES
     .lectors-outro {
       font-size: 1.5625rem; } }
 
-@media (min-width: 768px) {
-  .academy-pros {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 5em;
-    display: flex;
-    flex-wrap: wrap; } }
+.schedule-page .header__banner {
+  background-image: url("../assets/schedule-page/Hero Section.png"); }
 
-@media (min-width: 1024px) {
-  .academy-pros {
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    padding: 0 40px; } }
+.schedule-page .academy-pros {
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0; }
+
+@media (min-width: 768px) {
+  .schedule-page .card-academy-pro {
+    flex-basis: 50%; }
+    .schedule-page .card-academy-pro p {
+      width: 95%; } }
 
 @media (min-width: 1440px) {
-  .academy-pros {
-    margin-bottom: 15em; } }
+  .schedule-page .card-academy-pro {
+    flex-basis: 33.33%; }
+    .schedule-page .card-academy-pro p {
+      width: 75%; } }
 
-.card-academy-pro {
+@media screen and (min-width: 1550px) {
+  .schedule-page .card-academy-pro p {
+    width: 65%; } }
+
+@media screen and (min-width: 1925px) {
+  .schedule-page .card-academy-pro p {
+    width: 50%; } }
+
+.schedule-outro {
+  background: url("../assets/schedule-page/gears-as-background.png") center no-repeat;
+  background-size: cover;
+  font-size: 1.25rem;
+  line-height: 1.5;
   text-align: center;
-  font-family: "Mont-Bold";
-  font-size: 1.125rem;
-  color: #457d96;
-  border-bottom: 1px solid rgba(0, 27, 42, 0.2);
-  padding: 2.22em 0; }
-  .card-academy-pro .icon-wrapper::after {
-    padding-bottom: 35%; }
-  .card-academy-pro .icon-wrapper svg {
-    height: 100%;
-    width: auto;
-    max-width: 45%; }
-  .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
-    width: 50%;
-    margin: 0 auto; }
+  color: #ffffff;
+  padding: 2em; }
+  .schedule-outro p {
+    text-shadow: 5px 5px 15px #000000; }
   @media (min-width: 768px) {
-    .card-academy-pro {
-      border-bottom: 0;
-      flex-basis: 33.33%; }
-      .card-academy-pro p {
-        padding: 0.5em 0; }
-      .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
-        width: 85%; } }
+    .schedule-outro {
+      padding: 5em 2em; } }
   @media (min-width: 1440px) {
-    .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
-      width: 75%; }
-    .card-academy-pro .icon-wrapper {
-      position: relative;
-      top: unset;
-      bottom: unset;
-      right: unset; }
-      .card-academy-pro .icon-wrapper::after {
-        padding-bottom: 25%; }
-      .card-academy-pro .icon-wrapper svg {
-        max-width: 180px; } }
-  @media screen and (min-width: 1750px) {
-    .card-academy-pro:nth-of-type(4) p, .card-academy-pro:nth-of-type(5) p {
-      width: 60%; } }
+    .schedule-outro {
+      font-size: 1.5625rem;
+      padding: 8em 2.8em; } }
+
+.filter {
+  display: flex;
+  flex-wrap: wrap; }
+  .filter-wrapper {
+    padding-left: 0; }
+    .filter-wrapper p {
+      font-size: 0.9375rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5em; }
+  .filter-tab {
+    font-family: "Mont-SemiBold";
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    padding: 7px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #00c1c9;
+    color: #00c1c9; }
+  @media (min-width: 1024px) {
+    .filter-wrapper {
+      padding-top: 4em;
+      padding-left: 10px; } }
+  @media (min-width: 1440px) {
+    .filter-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 1em;
+      padding-left: 0; }
+      .filter-wrapper p {
+        margin-right: 1em;
+        margin-bottom: 0; }
+    .filter-tab {
+      margin-bottom: 0; } }
+
+.course {
+  flex-basis: 100%;
+  padding: 2em 0;
+  border-bottom: 1px solid rgba(0, 27, 42, 0.2); }
+  .course:first-child {
+    padding-top: 0; }
+  .courses-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 2em; }
+  .course .image-wrapper::after, .course .icon-wrapper::after {
+    padding-bottom: 59%; }
+  .course__info {
+    display: flex;
+    font-family: "Mont-Bold";
+    font-size: 1.125rem;
+    padding-top: 0.75em;
+    text-transform: uppercase; }
+    .course__info--day {
+      font-size: 2.5rem;
+      color: #457d96;
+      line-height: 1; }
+    .course__info--date {
+      margin-right: 1.1em; }
+    .course__info--subject {
+      text-transform: none;
+      margin-bottom: 1em; }
+    .course__info--duration {
+      font-size: 0.9375rem;
+      font-family: "Mont-Regular";
+      color: #457d96;
+      display: flex; }
+      .course__info--duration .start-hour,
+      .course__info--duration .duration-weeks {
+        position: relative; }
+        .course__info--duration .start-hour:before,
+        .course__info--duration .duration-weeks:before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%); }
+      .course__info--duration .start-hour {
+        padding-left: 1.75em;
+        margin-right: 1.1em; }
+        .course__info--duration .start-hour:before {
+          content: url("../assets/schedule-page/icon-watch.svg"); }
+      .course__info--duration .duration-weeks {
+        padding-left: 1.25em; }
+        .course__info--duration .duration-weeks:before {
+          content: url("../assets/schedule-page/icon-sandclock.svg"); }
+  @media (min-width: 768px) {
+    .course {
+      flex-basis: 49%;
+      border-bottom: 0;
+      padding: 0;
+      margin-bottom: 2em; }
+      .courses-section {
+        justify-content: space-between; }
+        .courses-section .buttons-container {
+          margin: 40px auto; }
+          .courses-section .buttons-container .button:first-child {
+            margin: 0; } }
+  @media (min-width: 1440px) {
+    .course {
+      margin-bottom: 3em; }
+      .course .image-wrapper::after, .course .icon-wrapper::after {
+        padding-bottom: 40%; }
+      .course__info--date {
+        margin-right: 1.25em; } }
