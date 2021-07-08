@@ -1088,6 +1088,25 @@ STYLES FOR THE MENU ON LAPTOP AND DESKTOP
       .carousel .carousel__nav .carousel__indicator.current-slide {
         background: #00c1c9; }
 
+/* SPECIALIZATION CARDS SECTION IS ON THE HOME PAGE AND ON THE PARTNERS PAGE*/
+.specializations-card {
+  font-family: "Mont-Bold";
+  text-align: center;
+  color: #001b2a;
+  border-bottom: 1px solid rgba(0, 27, 42, 0.1);
+  width: 100%;
+  position: relative; }
+  .specializations-card .card__visual-content {
+    height: 100%;
+    padding: 2em 0;
+    transition: all 0.2s ease-in; }
+    .specializations-card .card__visual-content img {
+      margin-bottom: 13px; }
+  @media (min-width: 768px) {
+    .specializations-card {
+      border-bottom: 0;
+      height: auto; } }
+
 /* Page introduction section on Learning page, Lectors page, */
 .page-introduction {
   padding-left: 40px;
@@ -1326,30 +1345,18 @@ COMPANY SPECIALIZATION SECTION STYLES
     .company-specializations {
       max-width: 75vw; } }
 
-.specializations-card {
-  text-align: center;
-  color: #001b2a;
-  border-bottom: 1px solid rgba(0, 27, 42, 0.1);
-  width: 100%;
-  position: relative; }
-  .specializations-card .card__visual-content {
-    height: 100%;
-    padding: 2em 0;
-    transition: all 0.2s ease-in; }
-    .specializations-card .card__visual-content img {
-      margin-bottom: 13px; }
-  @media (min-width: 768px) {
-    .specializations-card {
-      flex-basis: 50%;
-      border-bottom: 0;
-      height: auto; } }
-  @media (min-width: 1024px) {
-    .specializations-card {
-      flex-basis: 25%; } }
-  @media (hover: hover) and (pointer: fine) {
-    .specializations-card:hover .card__visual-content,
-    .specializations-card:focus .card__visual-content {
-      background: #00c1c9; } }
+@media (min-width: 768px) {
+  .specializations-card {
+    flex-basis: 50%; } }
+
+@media (min-width: 1024px) {
+  .specializations-card {
+    flex-basis: 25%; } }
+
+@media (hover: hover) and (pointer: fine) {
+  .specializations-card:hover .card__visual-content,
+  .specializations-card:focus .card__visual-content {
+    background: #00c1c9; } }
 
 .shape {
   position: absolute;
@@ -2399,3 +2406,203 @@ TESTIMONIALS SECTION STYLES
         padding-bottom: 40%; }
       .course__info--date {
         margin-right: 1.25em; } }
+
+.partners-page .header__banner {
+  background-image: url("../assets/partners-page/hero-section.png");
+  background-position: top; }
+
+.partners-page .introduction-row-one, .partners-page .introduction-row-two {
+  padding-left: 0;
+  padding-right: 0; }
+  .partners-page .introduction-row-one .introduction__image, .partners-page .introduction-row-two .introduction__image {
+    width: 100%;
+    height: 160px; }
+
+.partners-page .introduction__text {
+  background: #e5f9fa;
+  padding: 20px; }
+
+.partners-page .introduction__image::after {
+  padding-bottom: 50%; }
+
+@media (min-width: 768px) {
+  .partners-page .introduction-row-one .introduction__image, .partners-page .introduction-row-two .introduction__image {
+    height: auto; }
+    .partners-page .introduction-row-one .introduction__image::after, .partners-page .introduction-row-two .introduction__image::after {
+      padding-bottom: 60%; }
+    .partners-page .introduction-row-one .introduction__image img, .partners-page .introduction-row-two .introduction__image img {
+      width: auto;
+      height: 100%; }
+  .partners-page .introduction-row-two .introduction__image {
+    order: -1; }
+  .partners-page .introduction__text, .partners-page .introduction__image {
+    flex-basis: 50%; }
+  .partners-page .introduction__text {
+    padding: 35px;
+    display: flex;
+    align-items: center; } }
+
+@media (min-width: 1440px) {
+  .partners-page .introduction-row-one .introduction__image::after, .partners-page .introduction-row-two .introduction__image::after {
+    padding-bottom: 47%; }
+  .partners-page .introduction-row-one .introduction__image img, .partners-page .introduction-row-two .introduction__image img {
+    width: 100%;
+    height: auto; }
+  .partners-page .introduction-row-two .introduction__text p {
+    width: 100%; } }
+
+.partners-page .enroll-cta {
+  font-size: 1.125rem; }
+  .partners-page .enroll-cta p {
+    margin-bottom: 20px; }
+  .partners-page .enroll-cta .button {
+    font-size: 1rem; }
+
+@media (min-width: 1024px) {
+  .partners-page .enroll-cta {
+    font-size: 1.25rem; }
+  .partners-page .enroll-text {
+    margin-bottom: 2em; }
+  .partners-page .enroll-section .buttons-container {
+    width: 100%;
+    display: block; }
+    .partners-page .enroll-section .buttons-container .button {
+      font-size: 1.125rem;
+      margin-bottom: 0; } }
+
+@media (min-width: 1440px) {
+  .partners-page .enroll-text {
+    width: 100%; } }
+
+.partners-page .specializations-card:last-of-type {
+  border-bottom: 0; }
+
+@media (min-width: 768px) {
+  .partners-page .specializations-card {
+    flex-basis: 25%; }
+    .partners-page .specializations-card .card__visual-content {
+      padding: 1em 0; } }
+
+@media (hover: hover) and (pointer: fine) {
+  .partners-page .specializations-card:hover .card__visual-content,
+  .partners-page .specializations-card:focus .card__visual-content {
+    background: #ffffff; } }
+
+.partner {
+  font-family: "Inter";
+  font-size: 1.0625rem;
+  text-align: center;
+  margin-bottom: 2.35em; }
+  .partners-section-intro {
+    font-size: 1.25rem;
+    margin-bottom: 20px; }
+  .partner-cards-wrapper {
+    padding-left: 0;
+    padding-right: 0; }
+  .partner__logo {
+    margin-bottom: 1em; }
+    .partner__logo::after {
+      padding-bottom: 42%; }
+    .partner__logo img {
+      width: auto;
+      height: 100%; }
+  .partner#partner-four .partner__logo img {
+    width: 100%;
+    height: auto; }
+  .partner__info--name {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    color: #457d96;
+    text-decoration: underline;
+    margin-bottom: 0.25em; }
+  .partner__info--description p {
+    margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .partner {
+      flex-basis: 43%;
+      text-align: left; }
+      .partner-cards-wrapper {
+        justify-content: space-between; }
+      .partner__logo img {
+        top: 0;
+        left: 0;
+        transform: unset; } }
+  @media (min-width: 1440px) {
+    .partner {
+      margin-bottom: 4.7em;
+      font-size: 1.125rem; }
+      .partners-section {
+        padding-top: 100px;
+        padding-bottom: 100px; }
+        .partners-section-intro {
+          font-size: 1.5625rem;
+          margin-bottom: 40px; }
+      .partner__logo {
+        margin-bottom: 1.2em; }
+        .partner__logo::after {
+          padding-bottom: 33%; }
+      .partner#partner-three .partner__logo::after {
+        padding-bottom: 29%; }
+      .partner#partner-four .partner__logo::after {
+        padding-bottom: 23%; }
+      .partner#partner-four .partner__logo img {
+        width: auto;
+        height: 100%; } }
+
+@media (min-width: 768px) {
+  .company-specialty {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
+@media (min-width: 1440px) {
+  .company-specialty {
+    padding-left: 70px;
+    padding-right: 70px; } }
+
+.company-encouragement {
+  background: #001b2a;
+  color: #ffffff;
+  padding: 20px 40px; }
+  .company-encouragement .section-header {
+    margin-bottom: 1em; }
+    .company-encouragement .section-header h2 {
+      font-size: 1.25rem; }
+  .company-encouragement p {
+    font-size: 1.125rem; }
+  @media (min-width: 768px) {
+    .company-encouragement {
+      padding: 40px; } }
+  @media (min-width: 1440px) {
+    .company-encouragement {
+      display: flex;
+      align-items: center;
+      margin-right: 10px; }
+      .company-encouragement .section-header h2 {
+        font-size: 1.875rem; }
+      .company-encouragement p {
+        font-size: 1.5625rem; } }
+
+.specializations__list {
+  background: #e5f9fa;
+  padding-left: 0;
+  padding-right: 0; }
+  .specializations__list p {
+    font-size: 1.125rem;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 27, 42, 0.1); }
+
+@media (min-width: 768px) {
+  .specializations {
+    display: flex; }
+    .specializations__list {
+      padding: 30px; }
+      .specializations__list p {
+        font-size: 1.25rem;
+        padding: 0;
+        border-bottom: 0;
+        margin-bottom: 30px; } }
+
+@media (min-width: 1440px) {
+  .specializations__list p {
+    font-size: 1.5625rem; } }
